@@ -1,0 +1,81 @@
+.cards {
+  color: white;
+  background-image: url("https://images.unsplash.com/photo-1483985988355-763728e1935b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 12rem 0 0;
+  max-width: 35ch;
+  border-radius: 0.5em;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+
+.cards .cards-content {
+  padding: 1em;
+  padding-bottom: 1em;
+  background: linear-gradient(to right, rgba(255, 0, 0, 0), #1f1a1a);
+  transform: translateY(65%);
+  transition: transform 500ms ease;
+}
+
+.cards .cards-content > *:not(.cards-title) {
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+.cards .cards-body {
+  color: white;
+  position: relative;
+  top: 5px;
+}
+
+.cards .cards-title {
+  position: relative;
+  width: max-content;
+}
+
+.cards .cards-title::after {
+  content: "";
+  left: calc(1em * -1);
+  bottom: 0px;
+  width: calc(100% + 1em);
+  position: absolute;
+  height: 4px;
+  transition: transform 500ms ease;
+  transform-origin: left;
+  transform: scaleX(0);
+  background-color: #94d0cc;
+}
+
+.cards .button {
+  cursor: pointer;
+  display: inline;
+  text-decoration: none;
+  color: white;
+  background-color: #94d0cc;
+  padding: 0.5em 1.25em;
+  border-radius: 0.25em;
+}
+
+.cards button:hover,
+.cards button:focus {
+  background-color: white;
+}
+
+.cards:hover {
+  transform: scale(1.05);
+}
+
+.cards:hover .cards-title::after {
+  transform: scaleX(1);
+}
+
+.cards:hover .cards-content {
+  transition-delay: 500ms;
+  transform: translateY(0%);
+}
+
+.cards .cards-content > *:not(.cards-title) {
+  opacity: 1;
+  transition-delay: 1000ms;
+}
