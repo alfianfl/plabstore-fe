@@ -1,5 +1,5 @@
 import React from "react";
-import { CardSwipper } from "../../components/cards";
+import { Swiper } from "../../components/swiper";
 import { GridContainer, GridItem } from "../../components/grid";
 import { JustifyCenter } from "../../components/flex";
 import { Button } from "../../components/buttons";
@@ -12,24 +12,28 @@ function Home() {
       <GridContainer>
         <GridItem xs={12} sm={6}>
           <JustifyCenter>
-            <CardSwipper />
+            <Swiper />
           </JustifyCenter>
         </GridItem>
         <GridItem xs={12} sm={6}>
           <h1>Make it easy!</h1>
-          <div>
+          <div className="mt-0 mt-md-0  mt-lg-3">
             <p>
               T-Shirt eCommerce help you build a website with custom products
               and sale online. Business solution for the printing and
-              embroidery.
+              embroidery. T-Shirt eCommerce help you build a website with custom
+              products and sale online.
             </p>
           </div>
-          <a href="#" style={{ textDecoration: "none" }}>
+          <div
+            className="mt-0 mt-md-0  mt-lg-3"
+            style={{ textDecoration: "none" }}
+          >
             <Button variant="contained" color="secondary">
               {" "}
               Learn More
             </Button>
-          </a>
+          </div>
         </GridItem>
       </GridContainer>
     </>

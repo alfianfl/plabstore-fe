@@ -12,7 +12,7 @@
 
 .cards .cards-content {
   padding: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
   background: linear-gradient(to right, rgba(255, 0, 0, 0), #1f1a1a);
   transform: translateY(65%);
   transition: transform 500ms ease;
@@ -26,7 +26,7 @@
 .cards .cards-body {
   color: white;
   position: relative;
-  top: 5px;
+  top: 7px;
 }
 
 .cards .cards-title {
@@ -37,7 +37,7 @@
 .cards .cards-title::after {
   content: "";
   left: calc(1em * -1);
-  bottom: 0px;
+  bottom: -2px;
   width: calc(100% + 1em);
   position: absolute;
   height: 4px;
@@ -78,4 +78,17 @@
 .cards .cards-content > *:not(.cards-title) {
   opacity: 1;
   transition-delay: 1000ms;
+}
+
+.swiper-2 {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .swiper-1 {
+    display: none;
+  }
+  .swiper-2 {
+    display: block;
+  }
 }
