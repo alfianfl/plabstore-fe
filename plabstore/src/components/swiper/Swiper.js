@@ -2,8 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { CardSwipper } from "../cards";
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper/core";
-import "swiper/swiper.min.css";
 import "../../assets/css/cardSwipper.css";
+import "swiper/swiper.min.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
 

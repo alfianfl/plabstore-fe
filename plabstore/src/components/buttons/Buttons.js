@@ -1,16 +1,11 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      margin: theme.spacing(1),
-    },
-  },
-}));
+import UseStyles from "../../hooks/UseStyles";
 
 export default function RegularButton(props) {
+  const { styles } = UseStyles();
+  const useStyles = makeStyles(styles);
   const classes = useStyles();
   return (
     <Button
