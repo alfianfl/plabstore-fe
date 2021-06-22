@@ -1,8 +1,10 @@
 import React from "react";
-import { Swiper } from "../../components/swiper";
+import { CardSwiper } from "../../components/cards";
+import { CardProduct } from "../../components/cards";
 import { GridContainer, GridItem } from "../../components/grid";
 import { JustifyCenter } from "../../components/flex";
 import { Button } from "../../components/buttons";
+import { Banner } from "../../components/banners";
 import { Carousel } from "../../components/carousel";
 
 function Home() {
@@ -12,12 +14,12 @@ function Home() {
       <GridContainer>
         <GridItem xs={12} sm={6}>
           <JustifyCenter>
-            <Swiper />
+            <CardSwiper />
           </JustifyCenter>
         </GridItem>
         <GridItem xs={12} sm={6}>
-          <h1>Make it easy!</h1>
-          <div className="mt-0 mt-md-0  mt-lg-3">
+          <div className="mt-0 mt-md-0 px-lg-2 px-3 mt-lg-3">
+            <h1>Make it easy!</h1>
             <p>
               T-Shirt eCommerce help you build a website with custom products
               and sale online. Business solution for the printing and
@@ -26,7 +28,7 @@ function Home() {
             </p>
           </div>
           <div
-            className="mt-0 mt-md-0  mt-lg-3"
+            className="mt-0 mt-md-0 mx-lg-2 mx-3  mt-lg-3"
             style={{ textDecoration: "none" }}
           >
             <Button variant="contained" color="secondary">
@@ -34,6 +36,21 @@ function Home() {
               Learn More
             </Button>
           </div>
+        </GridItem>
+        <GridItem xs={12} sm={12}>
+          <span style={{ fontSize: "20px" }}>
+            <strong>“Pakaian Pria” </strong>pilihan
+          </span>
+          <CardProduct />
+        </GridItem>
+        <GridItem xs={12} sm={12}>
+          <Banner />
+        </GridItem>
+        <GridItem xs={12} sm={12}>
+          <span style={{ fontSize: "20px" }}>
+            <strong>“Pakaian Wanita” </strong>pilihan
+          </span>
+          <CardProduct />
         </GridItem>
       </GridContainer>
     </>

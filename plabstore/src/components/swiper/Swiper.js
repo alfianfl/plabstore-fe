@@ -1,6 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { CardSwipper } from "../cards";
+import { Swiper } from "swiper/react";
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper/core";
 import "../../assets/css/cardSwipper.css";
 import "swiper/swiper.min.css";
@@ -9,14 +8,34 @@ import "swiper/components/pagination/pagination.min.css";
 
 SwiperCore.use([EffectCoverflow, Pagination]);
 
-function SwiperCard() {
+export function SwiperCoverflow(props) {
+  const { children, ...rest } = props;
   return (
     <>
       <Swiper
+        {...rest}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={2}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          1920: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -26,34 +45,72 @@ function SwiperCard() {
         }}
         className="mySwiper swiper-1"
       >
-        <SwiperSlide>
-          <CardSwipper />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardSwipper />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardSwipper />
-        </SwiperSlide>
-      </Swiper>
-
-      {/* Mobile Swiper */}
-      <Swiper slidesPerView={1} spaceBetween={0} className="mySwiper swiper-2">
-        <SwiperSlide>
-          {" "}
-          <CardSwipper />
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <CardSwipper />
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <CardSwipper />
-        </SwiperSlide>
+        {children}
       </Swiper>
     </>
   );
 }
-
-export default SwiperCard;
+export function SwiperInfinite(props) {
+  const { children, ...rest } = props;
+  return (
+    <Swiper
+      {...rest}
+      slidesPerView={1}
+      spaceBetween={-5}
+      breakpoints={{
+        414: {
+          slidesPerView: 1,
+          spaceBetween: -30,
+        },
+        540: {
+          spaceBetween: -150,
+        },
+        768: {
+          spaceBetween: -10,
+        },
+      }}
+      className="mySwiper swiper-2"
+    >
+      {children}
+    </Swiper>
+  );
+}
+export function SwiperBasic(props) {
+  const { children, ...rest } = props;
+  return (
+    <Swiper
+      {...rest}
+      spaceBetween={-30}
+      slidesPerView={1}
+      breakpoints={{
+        414: {
+          slidesPerView: 1,
+          spaceBetween: -70,
+        },
+        540: {
+          slidesPerView: 1,
+          spaceBetween: -180,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: -50,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: -50,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1920: {
+          slidesPerView: 5,
+          spaceBetween: 100,
+        },
+      }}
+      className="mySwiper "
+    >
+      {children}
+    </Swiper>
+  );
+}

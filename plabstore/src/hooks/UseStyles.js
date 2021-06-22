@@ -3,11 +3,13 @@ import { fade } from "@material-ui/core/styles";
 function UseStyles() {
   const styles = (theme) => ({
     gridItem: {
-      padding: "0 5px !important",
+      padding: "0  !important",
+      marginTop: "50px",
     },
     grid: {
       width: "unset",
       padding: "0px",
+      marginTop: "30px",
     },
     grow: {
       flexGrow: 1,

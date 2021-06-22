@@ -14,7 +14,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import UseDropdownMenu from "./DropdownNavbar";
 
 export default function Navbar() {
-  const { styles } = UseStyles();
+  const { styles, ...props } = UseStyles();
   const useStyles = makeStyles(styles);
   const classes = useStyles();
 
@@ -32,6 +32,7 @@ export default function Navbar() {
       <AppBar className={classes.grow} position="static">
         <Toolbar style={{ display: "flex" }}>
           <IconButton
+            {...props}
             edge="start"
             className={classes.menuButton}
             color="default"

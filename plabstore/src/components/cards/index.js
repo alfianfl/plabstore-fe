@@ -1,1 +1,2 @@
-export { default as CardSwipper } from "./CardSwiper";
+export { default as CardSwiper } from "./CardSwiper";
+export { default as CardProduct } from "./CardProduct";

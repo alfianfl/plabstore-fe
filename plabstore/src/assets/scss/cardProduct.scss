@@ -1,0 +1,60 @@
+.fa-star {
+  color: gold;
+}
+
+.padding-0 {
+  padding-right: 0;
+  padding-left: 0;
+}
+.card {
+  transition: 0.5s;
+  overflow: hidden;
+}
+.button-beli {
+  display: none;
+  font-weight: 600;
+  border: 2px solid rgb(238, 232, 232);
+}
+.button-beli .btn {
+  color: rgb(238, 232, 232);
+}
+
+.card:hover {
+  box-shadow: 0 5px 10px 0 rgb(66 66 66 / 15%);
+}
+.card:hover .button-beli {
+  display: block;
+}
+.button-beli:hover {
+  border: 2px solid rgb(211, 204, 204);
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+.link:hover {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 414px) {
+  .slickSlider {
+    width: 85%;
+  }
+  .thumb-card {
+    justify-content: center;
+  }
+  .slick-prev:before {
+    font-size: 25px;
+    z-index: 2;
+  }
+
+  .slick-next:before {
+    z-index: 2;
+    font-size: 25px;
+    position: relative;
+    right: 5px;
+  }
+}

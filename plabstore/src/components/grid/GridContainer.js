@@ -6,6 +6,7 @@ import UseStyles from "../../hooks/UseStyles";
 
 export default function GridContainer(props) {
   const { styles } = UseStyles();
+
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const { children, ...rest } = props;

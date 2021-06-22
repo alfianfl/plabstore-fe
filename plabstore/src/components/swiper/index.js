@@ -1,1 +1,1 @@
-export { default as Swiper } from "./Swiper";
+export { SwiperCoverflow, SwiperInfinite, SwiperBasic } from "./Swiper";
