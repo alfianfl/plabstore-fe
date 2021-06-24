@@ -15,6 +15,9 @@ $gradient: to right, #000000, #302d2d;
   }
 }
 @media (max-width: 414px) {
+  .title-banner {
+    font-size: 20px;
+  }
   .btn-toko {
     span {
       font-size: 15px;

@@ -8,10 +8,10 @@ function CarouselHome() {
       <Carousel>
         <Carousel.Item interval={1000}>
           <img
-            className="d-block w-100"
+            className="img-fluid"
             src="https://images.unsplash.com/photo-1593539240406-4a35a0928eba?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njh8fGZhc2hpb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
             alt="First slide"
-            height="600px"
+            width="100%"
           />
           <Carousel.Caption>
             <h3>First slide label</h3>
@@ -20,10 +20,11 @@ function CarouselHome() {
         </Carousel.Item>
         <Carousel.Item interval={500}>
           <img
-            className="d-block w-100"
+            className="img-fluid"
             src="https://images.unsplash.com/photo-1491956142110-8a4226a12077?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fGZhc2hpb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
             alt="Second slide"
-            height="600px"
+            width="100%"
+            height="400px"
           />
           <Carousel.Caption>
             <h3>Second slide label</h3>
@@ -32,10 +33,11 @@ function CarouselHome() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="img-fluid"
             src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
             alt="Third slide"
-            height="600px"
+            width="100%"
+            height="400px"
           />
           <Carousel.Caption>
             <h3>Third slide label</h3>

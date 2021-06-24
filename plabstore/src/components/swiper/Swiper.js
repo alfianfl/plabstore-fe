@@ -93,7 +93,7 @@ export function SwiperBasic(props) {
         },
         414: {
           slidesPerView: 1,
-          spaceBetween: -90,
+          spaceBetween: -110,
         },
         540: {
           slidesPerView: 1,

@@ -4,7 +4,7 @@ function UseStyles() {
   const styles = (theme) => ({
     gridItem: {
       padding: "0  !important",
-      marginTop: "50px",
+      marginTop: "20px",
     },
     grid: {
       width: "unset",

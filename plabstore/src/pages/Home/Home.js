@@ -39,7 +39,7 @@ function Home() {
         </GridItem>
         <GridItem xs={12} sm={12}>
           <span
-            className="ml-0 ml-lg-3"
+            className="ml-3 ml-lg-3"
             style={{
               fontSize: "25px",
               marginBottom: "10px",
@@ -55,7 +55,7 @@ function Home() {
         </GridItem>
         <GridItem xs={12} sm={12}>
           <span
-            className=" ml-0 ml-lg-3 "
+            className=" ml-3 ml-lg-3 "
             style={{
               fontSize: "25px",
               marginBottom: "10px",
