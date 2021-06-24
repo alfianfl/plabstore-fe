@@ -20,7 +20,7 @@ function Home() {
         <GridItem xs={12} sm={6}>
           <div className="mt-0 mt-md-0 px-lg-2 px-3 mt-lg-3">
             <h1>Make it easy!</h1>
-            <p>
+            <p className="mt-0 mt-md-0 mx-lg-2 w-100 mt-lg-3">
               T-Shirt eCommerce help you build a website with custom products
               and sale online. Business solution for the printing and
               embroidery. T-Shirt eCommerce help you build a website with custom
@@ -28,7 +28,7 @@ function Home() {
             </p>
           </div>
           <div
-            className="mt-0 mt-md-0 mx-lg-2 mx-3 w-25 mt-lg-3"
+            className="mt-0 mt-md-0 mx-lg-2 mx-3 w-50 mt-lg-5"
             style={{ textDecoration: "none" }}
           >
             <Button variant="contained" size="medium" color="secondary">

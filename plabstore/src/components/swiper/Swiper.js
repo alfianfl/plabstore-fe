@@ -83,9 +83,17 @@ export function SwiperBasic(props) {
       spaceBetween={-30}
       slidesPerView={1}
       breakpoints={{
-        414: {
+        360: {
+          slidesPerView: 1,
+          spaceBetween: -55,
+        },
+        375: {
           slidesPerView: 1,
           spaceBetween: -70,
+        },
+        414: {
+          slidesPerView: 1,
+          spaceBetween: -90,
         },
         540: {
           slidesPerView: 1,
