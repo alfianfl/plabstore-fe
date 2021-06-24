@@ -28,17 +28,24 @@ function Home() {
             </p>
           </div>
           <div
-            className="mt-0 mt-md-0 mx-lg-2 mx-3  mt-lg-3"
+            className="mt-0 mt-md-0 mx-lg-2 mx-3 w-25 mt-lg-3"
             style={{ textDecoration: "none" }}
           >
-            <Button variant="contained" color="secondary">
+            <Button variant="contained" size="medium" color="secondary">
               {" "}
               Learn More
             </Button>
           </div>
         </GridItem>
         <GridItem xs={12} sm={12}>
-          <span style={{ fontSize: "20px" }}>
+          <span
+            className="ml-0 ml-lg-3"
+            style={{
+              fontSize: "25px",
+              marginBottom: "10px",
+              display: "inline-block",
+            }}
+          >
             <strong>“Pakaian Pria” </strong>pilihan
           </span>
           <CardProduct />
@@ -47,7 +54,14 @@ function Home() {
           <Banner />
         </GridItem>
         <GridItem xs={12} sm={12}>
-          <span style={{ fontSize: "20px" }}>
+          <span
+            className=" ml-0 ml-lg-3 "
+            style={{
+              fontSize: "25px",
+              marginBottom: "10px",
+              display: "inline-block",
+            }}
+          >
             <strong>“Pakaian Wanita” </strong>pilihan
           </span>
           <CardProduct />
