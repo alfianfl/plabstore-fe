@@ -1,0 +1,168 @@
+.fa-star {
+  color: gold;
+}
+
+.padding-0 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.card {
+  /* The container */
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  overflow: hidden;
+}
+
+.card .form-card {
+  display: none;
+  transition: all 500ms ease;
+}
+
+.card .thumb-img-product {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+.card:hover .container-radio,
+.card:hover .button-beli {
+  transform: scale(1);
+}
+
+.card:hover .form-card {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(43, 41, 41, 0.5);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover .thumb-img-product {
+  transform: scale(1.05);
+}
+
+.card .container-radio {
+  transition: transform 500ms ease;
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.card .container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.card .checkmark {
+  width: 35px;
+  height: 35px;
+  font-size: 12px;
+  display: flex;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.card .container-radio:hover input ~ .checkmark {
+  background-color: #f29191;
+  color: white;
+}
+
+.card .container-radio input:checked ~ .checkmark {
+  background-color: #f29191;
+  color: white;
+}
+
+.card .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.card .container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.card .list-size {
+  margin-top: 50px;
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.card .list-size .rounded-size {
+  width: 35px;
+  height: 35px;
+  font-size: 12px;
+  display: flex;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+}
+
+.card .button-beli {
+  transition: transform 500ms ease;
+  display: block;
+  font-weight: 600;
+  width: 30%;
+  margin-top: 20px;
+}
+
+.card .button-beli .btn {
+  color: #eee8e8;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card .link {
+  text-decoration: none;
+  color: black;
+}
+
+.card .link:hover {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 414px) {
+  .card .slickSlider {
+    width: 85%;
+  }
+  .card .thumb-card {
+    justify-content: center;
+  }
+  .card .slick-prev:before {
+    font-size: 25px;
+    z-index: 2;
+  }
+  .card .slick-next:before {
+    z-index: 2;
+    font-size: 25px;
+    position: relative;
+    right: 5px;
+  }
+}

@@ -5,8 +5,9 @@ function router() {
   return (
     <Router>
       <Switch>
-        {routes.map((route) => (
+        {routes.map((route, index) => (
           <Route
+            key={index}
             {...route}
             component={route.component}
             exact

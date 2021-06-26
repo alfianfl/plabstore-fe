@@ -1,0 +1,93 @@
+$maincolor: (
+  "--clr-neutral-900": hsl(207, 19%, 9%),
+  "--clr-neutral-100": hsl(0, 0%, 100%),
+  "main-color-1": #94d0cc,
+  "main-color-2": #f29191,
+  "--clr-accent-400": hsl(142, 90%, 961),
+);
+$padding-content: 1em;
+
+.cards {
+  color: map-get($maincolor, "--clr-neutral-100");
+  background-image: url("https://images.unsplash.com/photo-1483985988355-763728e1935b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 12rem 0 0;
+  max-width: 35ch;
+  border-radius: 0.5em;
+  overflow: hidden;
+  transition: transform 500ms ease;
+  .cards-content {
+    padding: $padding-content;
+    padding-bottom: 1.5em;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(31, 26, 26));
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+  }
+  .cards-content > *:not(.cards-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+  }
+  .cards-body {
+    color: rgb(255, 255, 255/0.8);
+    position: relative;
+    top: 9px;
+  }
+  .cards-title {
+    position: relative;
+    width: max-content;
+  }
+  .cards-title::after {
+    content: "";
+    left: calc(#{$padding-content} * -1);
+    bottom: -2px;
+    width: calc(100% + #{$padding-content});
+    position: absolute;
+    height: 4px;
+    transition: transform 500ms ease;
+    transform-origin: left;
+    transform: scaleX(0);
+    background-color: map-get($maincolor, "main-color-1");
+  }
+
+  .button {
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    color: map-get($maincolor, "--clr-accent-400");
+    background-color: map-get($maincolor, "main-color-1");
+    padding: 0.5em 1.25em;
+    border-radius: 0.25em;
+  }
+  button:hover,
+  button:focus {
+    background-color: map-get($maincolor, "--clr-neutral-100");
+  }
+}
+
+.cards:hover {
+  transform: scale(1.05);
+}
+.cards:hover .cards-title::after {
+  transform: scaleX(1);
+}
+.cards:hover .cards-content {
+  transition-delay: 500ms;
+  transform: translateY(0%);
+}
+.cards .cards-content > *:not(.cards-title) {
+  opacity: 1;
+  transition-delay: 1000ms;
+}
+.swiper-2 {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .swiper-1 {
+    display: none;
+  }
+  .swiper-2 {
+    display: block;
+  }
+}

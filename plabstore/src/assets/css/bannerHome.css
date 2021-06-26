@@ -1,0 +1,26 @@
+.banner {
+  color: white;
+  text-align: center;
+  background-color: #97bb7d;
+  background-image: linear-gradient(to right, #000000, #302d2d);
+  transition: 0.5s;
+}
+
+.banner .btn-toko {
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.banner .btn-toko:hover {
+  color: #f3efef;
+}
+
+@media (max-width: 414px) {
+  .title-banner {
+    font-size: 20px;
+  }
+  .btn-toko span {
+    font-size: 15px;
+  }
+}

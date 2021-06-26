@@ -1,0 +1,26 @@
+$gradient: to right, #000000, #302d2d;
+.banner {
+  color: white;
+  text-align: center;
+  background-color: #97bb7d;
+  background-image: linear-gradient($gradient);
+  transition: 0.5s;
+  .btn-toko {
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+  .btn-toko:hover {
+    color: rgb(243, 239, 239);
+  }
+}
+@media (max-width: 414px) {
+  .title-banner {
+    font-size: 20px;
+  }
+  .btn-toko {
+    span {
+      font-size: 15px;
+    }
+  }
+}
