@@ -27,17 +27,22 @@
 
 .card-product .form-card {
   display: none;
+  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 
 .card-product .thumb-img-product {
   width: 100%;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
-.card-product:hover .container-radio,
-.card-product:hover .button-beli {
+.card:hover .container-radio,
+.card:hover .button-beli {
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -48,24 +53,40 @@
   bottom: 0;
   background-color: rgba(43, 41, 41, 0.5);
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
-.card-product:hover .thumb-img-product {
+.card:hover .thumb-img-product {
+  -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 
-.card-product .container-radio {
+.card .container-radio {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
   display: block;
   position: relative;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -79,9 +100,15 @@
   width: 35px;
   height: 35px;
   font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: black;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   border-radius: 50%;
@@ -110,8 +137,12 @@
 
 .card-product .list-size {
   margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 70%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -119,17 +150,26 @@
   width: 35px;
   height: 35px;
   font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: black;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   border-radius: 50%;
   background-color: #c4c4c4;
 }
 
-.card-product .button-beli {
+.card .button-beli {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
   display: block;
   font-weight: 600;
   width: 30%;
@@ -159,7 +199,9 @@
   .card-product .slickSlider {
     width: 85%;
   }
-  .card-product .thumb-card {
+  .card .thumb-card {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .card-product .slick-prev:before {

@@ -2,7 +2,9 @@
   color: white;
   text-align: center;
   background-color: #97bb7d;
+  background-image: -webkit-gradient(linear, left top, right top, from(#000000), to(#302d2d));
   background-image: linear-gradient(to right, #000000, #302d2d);
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
