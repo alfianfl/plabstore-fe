@@ -1,0 +1,28 @@
+.profile {
+  background-color: white;
+  min-height: 100vh;
+  height: 100%;
+  padding-top: 2rem;
+}
+
+.profile .profile-container {
+  margin-bottom: 10rem;
+}
+
+.profile .profile-pict {
+  border-radius: 100%;
+  margin: 1rem;
+}
+
+.profile .profile-pict img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.profile .edit-profil {
+  text-decoration: underline;
+}
+
+.profile .edit-profil a {
+  color: black;
+}
