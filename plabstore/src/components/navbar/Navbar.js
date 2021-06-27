@@ -5,19 +5,19 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import UseStyles from "../../hooks/UseStyles";
-// import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import UseDropdownMenu from "./DropdownNavbar";
+import Typography from "@material-ui/core/Typography";
+import { ModalLogin, ModalRegister } from "../modal";
 
 export default function Navbar() {
   const { styles, ...props } = UseStyles();
   const useStyles = makeStyles(styles);
   const classes = useStyles();
-
   const {
     renderMenu,
     renderMobileMenu,
@@ -26,6 +26,8 @@ export default function Navbar() {
     menuId,
     mobileMenuId,
   } = UseDropdownMenu();
+
+  const [isLogin] = React.useState(false);
 
   return (
     <div className={classes.grow}>
@@ -59,23 +61,44 @@ export default function Navbar() {
           <div className={classes.grow} />
 
           <div className={classes.sectionDesktop}>
-            <IconButton edge="start" color="default" aria-label="open drawer">
-              <IconButton aria-label="show 4 new mails" color="inherit">
-                <Badge badgeContent={4} color="secondary">
-                  <ShoppingBasketIcon />
-                </Badge>
-              </IconButton>
-            </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="default"
-            >
-              <AccountCircle />
-            </IconButton>
+            {isLogin ? (
+              <>
+                <IconButton
+                  edge="start"
+                  color="default"
+                  aria-label="open drawer"
+                >
+                  <IconButton aria-label="show 4 new mails" color="inherit">
+                    <Badge badgeContent={4} color="secondary">
+                      <ShoppingBasketIcon />
+                    </Badge>
+                  </IconButton>
+                </IconButton>
+                <IconButton
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  color="default"
+                >
+                  <AccountCircle />
+                </IconButton>{" "}
+              </>
+            ) : (
+              <>
+                <ModalLogin>
+                  <Typography className={classes.title} variant="h6" nowWrap>
+                    Login
+                  </Typography>
+                </ModalLogin>
+                <ModalRegister>
+                  <Typography className={classes.title} variant="h6" nowWrap>
+                    Register
+                  </Typography>
+                </ModalRegister>
+              </>
+            )}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

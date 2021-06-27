@@ -23,12 +23,18 @@ function UseStyles() {
       marginRight: theme.spacing(2),
     },
     title: {
-      display: "none",
+      display: "block",
       [theme.breakpoints.up("sm")]: {
         display: "block",
       },
-      color: "default",
+      color: "black",
+      fontSize: "16px",
+      margin: "0px 20px 0px 20px",
       textAlign: "center",
+      "&:hover": {
+        color: "#94D0CC",
+        cursor: "pointer",
+      },
     },
     search: {
       position: "relative",
@@ -84,6 +90,20 @@ function UseStyles() {
     root: {
       "& > *": {
         margin: theme.spacing(1),
+      },
+    },
+    modal: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    paper: {
+      backgroundColor: theme.palette.background.paper,
+
+      padding: theme.spacing(2, 4, 3),
+      width: "40%",
+      [theme.breakpoints.down("md")]: {
+        width: "90%",
       },
     },
   });

@@ -7,7 +7,8 @@
   padding-left: 0;
 }
 
-.card {
+.card-product {
+  border-radius: 10px;
   /* The container */
   /* Hide the browser's default radio button */
   /* Create a custom radio button */
@@ -18,23 +19,29 @@
   overflow: hidden;
 }
 
-.card .form-card {
+.card-product .card-body {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #a7a6a6;
+}
+
+.card-product .form-card {
   display: none;
   transition: all 500ms ease;
 }
 
-.card .thumb-img-product {
+.card-product .thumb-img-product {
   width: 100%;
   cursor: pointer;
   transition: transform 500ms ease;
 }
 
-.card:hover .container-radio,
-.card:hover .button-beli {
+.card-product:hover .container-radio,
+.card-product:hover .button-beli {
   transform: scale(1);
 }
 
-.card:hover .form-card {
+.card-product:hover .form-card {
   top: 0;
   left: 0;
   right: 0;
@@ -48,11 +55,11 @@
   justify-content: center;
 }
 
-.card:hover .thumb-img-product {
+.card-product:hover .thumb-img-product {
   transform: scale(1.05);
 }
 
-.card .container-radio {
+.card-product .container-radio {
   transition: transform 500ms ease;
   display: block;
   position: relative;
@@ -62,13 +69,13 @@
   user-select: none;
 }
 
-.card .container-radio input {
+.card-product .container-radio input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.card .checkmark {
+.card-product .checkmark {
   width: 35px;
   height: 35px;
   font-size: 12px;
@@ -81,34 +88,34 @@
   background-color: #ccc;
 }
 
-.card .container-radio:hover input ~ .checkmark {
+.card-product .container-radio:hover input ~ .checkmark {
   background-color: #f29191;
   color: white;
 }
 
-.card .container-radio input:checked ~ .checkmark {
+.card-product .container-radio input:checked ~ .checkmark {
   background-color: #f29191;
   color: white;
 }
 
-.card .checkmark:after {
+.card-product .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.card .container-radio input:checked ~ .checkmark:after {
+.card-product .container-radio input:checked ~ .checkmark:after {
   display: block;
 }
 
-.card .list-size {
+.card-product .list-size {
   margin-top: 50px;
   display: flex;
   width: 70%;
   justify-content: space-between;
 }
 
-.card .list-size .rounded-size {
+.card-product .list-size .rounded-size {
   width: 35px;
   height: 35px;
   font-size: 12px;
@@ -121,7 +128,7 @@
   background-color: #c4c4c4;
 }
 
-.card .button-beli {
+.card-product .button-beli {
   transition: transform 500ms ease;
   display: block;
   font-weight: 600;
@@ -129,37 +136,37 @@
   margin-top: 20px;
 }
 
-.card .button-beli .btn {
+.card-product .button-beli .btn {
   color: #eee8e8;
 }
 
-.card:hover {
+.card-product:hover {
   cursor: pointer;
 }
 
-.card .link {
+.card-product .link {
   text-decoration: none;
   color: black;
 }
 
-.card .link:hover {
+.card-product .link:hover {
   text-decoration: none;
   color: black;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 414px) {
-  .card .slickSlider {
+  .card-product .slickSlider {
     width: 85%;
   }
-  .card .thumb-card {
+  .card-product .thumb-card {
     justify-content: center;
   }
-  .card .slick-prev:before {
+  .card-product .slick-prev:before {
     font-size: 25px;
     z-index: 2;
   }
-  .card .slick-next:before {
+  .card-product .slick-next:before {
     z-index: 2;
     font-size: 25px;
     position: relative;

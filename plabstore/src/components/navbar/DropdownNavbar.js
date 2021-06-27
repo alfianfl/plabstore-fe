@@ -1,10 +1,20 @@
 import React from "react";
 import MenuItem from "@material-ui/core/MenuItem";
+import UseStyles from "../../hooks/UseStyles";
 import Menu from "@material-ui/core/Menu";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import { ModalLogin, ModalRegister } from "../modal";
 
 function DropdownNavbar() {
+  const { styles, ...props } = UseStyles();
+  const useStyles = makeStyles(styles);
+  const classes = useStyles();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+  const [isLogin] = React.useState(false);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -27,7 +37,7 @@ function DropdownNavbar() {
   };
 
   const menuId = "primary-search-account-menu";
-  const renderMenu = (
+  const renderMenu = isLogin ? (
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{ vertical: "top", horizontal: "right" }}
@@ -43,10 +53,53 @@ function DropdownNavbar() {
       <MenuItem onClick={handleMenuClose}>Wishlist</MenuItem>
       <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
     </Menu>
+  ) : (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+      <MenuItem onClick={handleMenuClose}>
+        {" "}
+        <ModalLogin>
+          <Typography className={classes.title} variant="h6" nowWrap>
+            Login
+          </Typography>
+        </ModalLogin>
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        {" "}
+        <ModalRegister>
+          <Typography className={classes.title} variant="h6" nowWrap>
+            Register
+          </Typography>
+        </ModalRegister>
+      </MenuItem>
+    </Menu>
   );
 
   const mobileMenuId = "primary-search-account-menu-mobile";
-  const renderMobileMenu = (
+  const renderMobileMenu = isLogin ? (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Riwayat Pembelian</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Status Pemesanan</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Wishlist</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+    </Menu>
+  ) : (
     <Menu
       anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{ vertical: "top", horizontal: "right" }}
@@ -54,14 +107,24 @@ function DropdownNavbar() {
       keepMounted
       transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
+      onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Riwayat Pembelian</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Status Pemesanan</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Cart</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Wishlist</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        {" "}
+        <ModalLogin>
+          <Typography className={classes.title} variant="h6" nowWrap>
+            Login
+          </Typography>
+        </ModalLogin>
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        {" "}
+        <ModalRegister>
+          <Typography className={classes.title} variant="h6" nowWrap>
+            Register
+          </Typography>
+        </ModalRegister>
+      </MenuItem>
     </Menu>
   );
   return {
