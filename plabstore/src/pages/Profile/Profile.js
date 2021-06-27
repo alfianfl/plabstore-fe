@@ -1,7 +1,7 @@
 import React from "react";
-import '../../assets/css/profile.css'
-import { JustifyCenter } from "../../components/flex"
-import { CardProduct } from "../../components/cards"
+import "../../assets/css/profile.css";
+import { JustifyCenter } from "../../components/flex";
+import { CardProduct } from "../../components/cards";
 
 function Profile() {
   return (
@@ -22,11 +22,10 @@ function Profile() {
           </div>
         </div>
       </JustifyCenter>
-      <JustifyCenter>
-        <CardProduct />
-      </JustifyCenter>
+
+      <CardProduct />
     </div>
-  )
+  );
 }
 
 export default Profile;
