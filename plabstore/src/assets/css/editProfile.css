@@ -1,0 +1,74 @@
+.edit-profile {
+  min-height: 100vh;
+  height: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.edit-profile .user-tab {
+  background-color: white;
+  width: 100%;
+  border: 1px solid black;
+  margin-right: 1rem;
+  padding: 2rem;
+}
+
+.edit-profile .user-tab .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.edit-profile .user-tab .user-info img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.edit-profile .user-tab .user-info .user-name {
+  height: 100%;
+  width: 100%;
+}
+
+.edit-profile .user-tab .user-tab-btn {
+  background-color: white;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+}
+
+.edit-profile .detail-profile-container {
+  background-color: white;
+  min-height: 80vh;
+  width: 100%;
+  border: 1px solid black;
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+
+.edit-profile .detail-profile-container .profile-pict {
+  background-color: grey;
+  width: 100%;
+  height: 10rem;
+}
+
+.edit-profile .detail-profile-container .btn-white {
+  background-color: white;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.edit-profile .detail-profile-container .bio-form .text-bio {
+  width: 100%;
+}
+
+.edit-profile .detail-profile-container .address-container {
+  width: 100%;
+  border: 1px solid black;
+  padding: 1rem;
+  font-size: 12px;
+}
+
+.edit-profile .detail-profile-container .address-container a {
+  text-decoration: underline;
+  color: black;
+}

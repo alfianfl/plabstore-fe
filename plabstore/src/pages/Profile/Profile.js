@@ -2,6 +2,7 @@ import React from "react";
 import "../../assets/css/profile.css";
 import { JustifyCenter } from "../../components/flex";
 import { CardProduct } from "../../components/cards";
+import { Link } from 'react-router-dom'
 
 function Profile() {
   return (
@@ -18,7 +19,7 @@ function Profile() {
             <h4>User A</h4>
           </div>
           <div className="edit-profil">
-            <a href="/profile">Edit Profil</a>
+            <Link to="EditProfile">Edit Profil</Link>
           </div>
         </div>
       </JustifyCenter>
