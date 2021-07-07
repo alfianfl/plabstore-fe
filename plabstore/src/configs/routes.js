@@ -1,4 +1,4 @@
-import { Home, Profile, EditProfile } from "../pages";
+import { Home, Profile, EditProfile, Dashboard } from "../pages";
 export const routes = [
   {
     name: "Home",
@@ -21,4 +21,15 @@ export const routes = [
     },
     component: EditProfile,
   },
+  
 ];
+
+export const routeAdmin = [
+  {
+    name: "Dashboard",
+    path: () => {
+      return "/Dashboard";
+    },
+    component: Dashboard,
+  },
+]

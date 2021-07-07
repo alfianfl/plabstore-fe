@@ -11,7 +11,7 @@ function CardBio() {
     return (
         <div className="detail-profile-container d-flex flex-column ">
             <div className="">Ubah Biodata Diri</div>
-            <div className="container ">
+            <div className="container mt-2">
                 <div className="row data-diri ">
                     <div className="col-12 col-md-4">
                         <div className="mr-1">

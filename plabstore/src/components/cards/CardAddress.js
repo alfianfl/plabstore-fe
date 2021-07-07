@@ -7,7 +7,7 @@ function CardAddress() {
     return (
         <div className="detail-profile-container ">
             <div className="">Ubah Daftar Alamat</div>
-            <div className="mt-5">
+            <div className="mt-2">
                 <ModalAddress>
                     <button className="btn-white w-50">Tambah Alamat Baru</button>
                 </ModalAddress>

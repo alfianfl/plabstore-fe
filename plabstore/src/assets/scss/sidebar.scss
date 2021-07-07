@@ -1,0 +1,58 @@
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #e4e4e4;
+    /* padding: 5%; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    .sidebar-bar {
+        list-style-type: none
+    }
+    .nav-link {
+        color: #554fc5;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 17px;
+    }
+    .nav-link:hover {
+        color: #1e1b66;
+    }
+}
+.sidebar-desktop{
+    height: 100%;
+}
+
+#content {
+    margin-left: 250px;
+    padding-left: 2%;
+    padding-top: 3%;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #f1f1f1;
+
+    .cart-body {
+        background-color: white;
+    }
+}
+
+.btn-edit {
+    background-color: #184d47;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    /* width: 48%; */
+}
+
+.btn-hapus {
+    background-color: white;
+    color: #184d47;
+    border: 1px solid #184d47;
+    border-radius: 5px;
+    padding: 5px;
+    /* width: 48%; */
+}
