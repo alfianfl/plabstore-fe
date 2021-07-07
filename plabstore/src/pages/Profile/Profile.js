@@ -19,7 +19,7 @@ function Profile() {
             <h4>User A</h4>
           </div>
           <div className="edit-profil">
-            <Link to="EditProfile">Edit Profil</Link>
+            <Link to="/EditProfile">Edit Profil</Link>
           </div>
         </div>
       </JustifyCenter>

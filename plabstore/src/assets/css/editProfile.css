@@ -42,7 +42,7 @@
   width: 100%;
   border: 1px solid black;
   margin-left: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .edit-profile .detail-profile-container .profile-pict {
@@ -59,6 +59,11 @@
 
 .edit-profile .detail-profile-container .bio-form .text-bio {
   width: 100%;
+}
+
+.edit-profile .detail-profile-container .data-diri {
+  min-height: 80vh;
+  height: 100%;
 }
 
 .edit-profile .detail-profile-container .address-container {
