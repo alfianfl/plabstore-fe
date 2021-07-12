@@ -5,3 +5,6 @@ export { default as Dashboard } from "./Dashboard"
 export { default as DetailProduct } from "./DetailProduct";
 export { default as Produk } from "./Product";
 export { default as StatusPembelian } from "./StatusPembelian";
+export { default as ProdukAdmin } from './ProductAdmin'
+export { default as Transaksi } from './Transaksi'
+export { default as User } from './User'

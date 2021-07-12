@@ -1,11 +1,11 @@
 import React from 'react'
-import { Sidebar } from '../../components/sidebar'
+import '../../assets/css/dashboard.css'
 
-function Dashboard() {
+
+function Dashboard({children}) {
     return (
         <div id="content">
-            <Sidebar></Sidebar>
-
+            {children}
         </div>
     )
 }

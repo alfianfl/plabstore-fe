@@ -7,13 +7,13 @@ function Sidebar() {
         <nav id="sidebar" className="navbar sidebar-desktop">
             <ul className="sidebar-bar">
                 <li className="nav-item mb-2">
-                    <Link className="nav-link" to="/Dashboard">Produk</Link>
+                    <Link className="nav-link" to="/ProdukAdmin">Produk</Link>
                 </li>
                 <li className="nav-item mb-2">
-                    <Link className="nav-link" to="/Dashboard">Transaksi</Link>
+                    <Link className="nav-link" to="/Transaksi">Transaksi</Link>
                 </li>
                 <li className="nav-item mb-2">
-                    <Link className="nav-link" to="/Dashboard">User</Link>
+                    <Link className="nav-link" to="/User">User</Link>
                 </li>
             </ul>
         </nav>

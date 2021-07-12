@@ -3,6 +3,7 @@ import { routes, routeAdmin } from "./routes";
 import { Navbar, NavAdmin } from "../components/navbar";
 import { Footer } from "../components/footer";
 import { Sidebar } from "../components/sidebar";
+import Dashboard from '../pages/Dashboard'
 
 function router() {
   const role = 0
@@ -27,17 +28,23 @@ function router() {
         </Router>
       ) : (
         <Router>
-          <NavAdmin />
-          <Sidebar />
+          {/* <NavAdmin /> */}
+
           <Switch>
             {routeAdmin.map((route, index) => (
               <Route
                 key={index}
                 {...route}
-                component={route.component}
                 exact
                 path={route.path()}
-              />
+              >
+                <>
+                  <Sidebar />
+                  <Dashboard>
+                    < route.component />
+                  </Dashboard>
+                </>
+              </ Route>
             ))}
           </Switch>
         </Router>

@@ -5,7 +5,9 @@ import {
   Produk,
   DetailProduct,
   StatusPembelian,
-  Dashboard
+  ProdukAdmin,
+  Transaksi,
+  User
 } from "../pages";
 
 export const routes = [
@@ -61,10 +63,31 @@ export const routes = [
 
 export const routeAdmin = [
   {
-    name: "Dashboard",
+    name: "DefaultDashboard",
     path: () => {
-      return "/Dashboard";
+      return "/";
     },
-    component: Dashboard,
+    component: ProdukAdmin,
+  },
+  {
+    name: "ProdukAdmin",
+    path: () => {
+      return "/ProdukAdmin";
+    },
+    component: ProdukAdmin,
+  },
+  {
+    name: "Transaksi",
+    path: () => {
+      return "/Transaksi";
+    },
+    component: Transaksi,
+  },
+  {
+    name: "User",
+    path: () => {
+      return "/User";
+    },
+    component: User,
   },
 ]
