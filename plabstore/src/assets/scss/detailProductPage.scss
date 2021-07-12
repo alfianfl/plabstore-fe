@@ -1,0 +1,147 @@
+.detail-produk {
+  background-color: white;
+  width: 100%;
+
+  /* The container */
+  .container-radio {
+    transition: transform 500ms ease;
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default radio button */
+  .container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container-radio:hover input ~ .checkmark {
+    background-color: #f29191;
+    color: white;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .container-radio input:checked ~ .checkmark {
+    background-color: #f29191;
+    color: white;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .container-radio input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  overflow: hidden;
+
+  .list-size-detail {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    .rounded-size {
+      width: 35px;
+      height: 35px;
+      font-size: 12px;
+      display: flex;
+      color: black;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #c4c4c4;
+    }
+  }
+
+  .gambar-produk {
+    width: 330px;
+  }
+
+  .deskripsi-produk {
+    /* background-color: white; */
+    width: 670px;
+  }
+
+  .btn-beli,
+  .btn-wishlist {
+    background-color: rgb(148, 208, 204);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 48%;
+  }
+
+  .btn-keranjang {
+    background-color: white;
+    color: #184d47;
+    border: 4px solid #184d47;
+    border-radius: 5px;
+    padding: 5px;
+    width: 48%;
+  }
+
+  .thumb-toko {
+    background-color: white;
+  }
+  .thumb-deskripsi {
+    background-color: white;
+  }
+
+  .toko-img {
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    border-radius: 50%;
+  }
+
+  #detail-produk .btn-kuantitas {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: rgb(148, 208, 204);
+    color: #fff;
+  }
+
+  #detail-produk .kuantitas {
+    width: 64px;
+    height: 32px;
+    border: none;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 20px;
+    }
+  }
+}

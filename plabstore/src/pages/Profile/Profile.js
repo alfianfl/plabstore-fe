@@ -1,8 +1,8 @@
 import React from "react";
 import "../../assets/css/profile.css";
 import { JustifyCenter } from "../../components/flex";
-import { CardProduct } from "../../components/cards";
-import { Link } from 'react-router-dom'
+import { CardProductSwiper } from "../../components/cards";
+import { Link } from "react-router-dom";
 
 function Profile() {
   return (
@@ -24,7 +24,7 @@ function Profile() {
         </div>
       </JustifyCenter>
 
-      <CardProduct />
+      <CardProductSwiper />
     </div>
   );
 }

@@ -1,7 +1,7 @@
-import React from 'react'
-import { GridContainer, GridItem } from "../../components/grid"
-import '../../assets/css/editProfile.css'
-import { Button } from '../../components/buttons'
+import React from "react";
+import { GridContainer, GridItem } from "../grid";
+import "../../assets/css/editProfile.css";
+import { Button } from "../buttons";
 
 function CardBio() {
     const handleChange = (data) => {
@@ -53,4 +53,4 @@ function CardBio() {
     )
 }
 
-export default CardBio
+export default CardBio;

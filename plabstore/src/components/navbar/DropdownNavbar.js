@@ -6,6 +6,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { ModalLogin, ModalRegister } from "../modal";
 
+import { Link } from "react-router-dom";
+
 function DropdownNavbar() {
   const { styles, ...props } = UseStyles();
   const useStyles = makeStyles(styles);
@@ -14,7 +16,7 @@ function DropdownNavbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-  const [isLogin] = React.useState(false);
+  const [isLogin] = React.useState(true);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -36,6 +38,7 @@ function DropdownNavbar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
+  // desktop
   const menuId = "primary-search-account-menu";
   const renderMenu = isLogin ? (
     <Menu
@@ -49,7 +52,12 @@ function DropdownNavbar() {
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>Riwayat Pembelian</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Status Pemesanan</MenuItem>
+      <Link
+        style={{ textDecoration: "none", color: "black" }}
+        to="/status-pembelian"
+      >
+        <MenuItem onClick={handleMenuClose}>Status Pemesanan</MenuItem>
+      </Link>
       <MenuItem onClick={handleMenuClose}>Wishlist</MenuItem>
       <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
     </Menu>
@@ -82,20 +90,26 @@ function DropdownNavbar() {
     </Menu>
   );
 
+  // mobile
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = isLogin ? (
     <Menu
-      anchorEl={anchorEl}
+      anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      id={menuId}
+      id={mobileMenuId}
       keepMounted
       transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={isMenuOpen}
+      open={isMobileMenuOpen}
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>Riwayat Pembelian</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Status Pemesanan</MenuItem>
+      <Link
+        style={{ textDecoration: "none", color: "black" }}
+        to="/status-pembelian"
+      >
+        <MenuItem onClick={handleMenuClose}>Status Pemesanan</MenuItem>
+      </Link>
       <MenuItem onClick={handleMenuClose}>Wishlist</MenuItem>
       <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
     </Menu>
