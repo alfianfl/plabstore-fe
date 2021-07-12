@@ -18,6 +18,7 @@ export function SwiperCoverflow(props) {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={2}
+        loop={true}
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -54,6 +55,7 @@ export function SwiperInfinite(props) {
   const { children, ...rest } = props;
   return (
     <Swiper
+      loop={true}
       {...rest}
       slidesPerView={1}
       spaceBetween={-5}
@@ -80,6 +82,7 @@ export function SwiperBasic(props) {
   return (
     <Swiper
       {...rest}
+      loop={true}
       spaceBetween={-30}
       slidesPerView={1}
       breakpoints={{

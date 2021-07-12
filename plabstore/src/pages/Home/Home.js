@@ -1,6 +1,6 @@
 import React from "react";
 import { CardSwiper } from "../../components/cards";
-import { CardProduct } from "../../components/cards";
+import { CardProductSwiper } from "../../components/cards";
 import { GridContainer, GridItem } from "../../components/grid";
 import { JustifyCenter } from "../../components/flex";
 import { Button } from "../../components/buttons";
@@ -48,7 +48,7 @@ function Home() {
           >
             <strong>“Pakaian Pria” </strong>pilihan
           </span>
-          <CardProduct />
+          <CardProductSwiper />
         </GridItem>
         <GridItem xs={12} sm={12}>
           <Banner />
@@ -64,7 +64,7 @@ function Home() {
           >
             <strong>“Pakaian Wanita” </strong>pilihan
           </span>
-          <CardProduct />
+          <CardProductSwiper />
         </GridItem>
       </GridContainer>
     </>

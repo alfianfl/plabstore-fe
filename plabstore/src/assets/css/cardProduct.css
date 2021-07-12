@@ -7,6 +7,58 @@
   padding-left: 0;
 }
 
+.paginationBttns {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.paginationBttns a {
+  padding: 15px;
+  height: 40px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+  color: black;
+  margin: 8px;
+  /* border: 1px solid #184d47; */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a:not([href]):not([class]) {
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+a:not([href]):not([class]):hover {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #94d0cc;
+  text-decoration: none;
+}
+
+.paginationActive a:not([href]):not([class]) {
+  background-color: #f29191;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #f29191;
+}
+
+.paginationDisabled a {
+  text-decoration: none;
+  color: black;
+}
+
 .card-product {
   border-radius: 10px;
   /* The container */
@@ -27,23 +79,18 @@
 
 .card-product .form-card {
   display: none;
-  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 
 .card-product .thumb-img-product {
   width: 100%;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 500ms ease;
-  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
-  transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
 .card-product:hover .container-radio,
 .card-product:hover .button-beli {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .card-product:hover .form-card {
@@ -53,40 +100,24 @@
   bottom: 0;
   background-color: rgba(43, 41, 41, 0.5);
   z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-product:hover .thumb-img-product {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .card-product .container-radio {
-  -webkit-transition: -webkit-transform 500ms ease;
-  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
-  transition: transform 500ms ease, -webkit-transform 500ms ease;
   display: block;
   position: relative;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -100,16 +131,10 @@
   width: 35px;
   height: 35px;
   font-size: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: black;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   border-radius: 50%;
   background-color: #ccc;
@@ -137,39 +162,26 @@
 
 .card-product .list-size {
   margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 70%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .card-product .list-size .rounded-size {
   width: 35px;
   height: 35px;
   font-size: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: black;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   border-radius: 50%;
   background-color: #c4c4c4;
 }
 
 .card-product .button-beli {
-  -webkit-transition: -webkit-transform 500ms ease;
-  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
-  transition: transform 500ms ease, -webkit-transform 500ms ease;
   display: block;
   font-weight: 600;
   width: 30%;
@@ -200,9 +212,7 @@
     width: 85%;
   }
   .card-product .thumb-card {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .card-product .slick-prev:before {
     font-size: 25px;
@@ -213,5 +223,15 @@
     font-size: 25px;
     position: relative;
     right: 5px;
+  }
+}
+
+.product .card-product {
+  width: 18rem;
+}
+
+@media (min-width: 1920px) {
+  .product .card-product {
+    width: 25rem;
   }
 }
