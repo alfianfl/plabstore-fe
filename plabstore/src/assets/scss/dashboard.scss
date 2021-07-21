@@ -1,10 +1,15 @@
 #content {
-    margin-left: 250px;
-    padding-left: 2%;
-    padding-top: 3%;
+    // margin-left: 250px;
+    // padding-left: 2%;
+    // padding-top: 3%;
+    display: flex;
+    // position: relative;
     min-height: 100vh;
     height: 100%;
-    background-color: #f1f1f1;
+    // background-color: #f1f1f1;
+    // overflow-x: scroll;
+    width: 100%;
+    transition: 200ms;
 
     .cart-body {
         background-color: white;
@@ -27,4 +32,8 @@
     border-radius: 5px;
     padding: 5px;
     /* width: 48%; */
+}
+
+.tables {
+    padding: 2rem;
 }

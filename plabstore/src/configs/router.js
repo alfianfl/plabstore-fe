@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { routes, routeAdmin } from "./routes";
-import { Navbar, NavAdmin } from "../components/navbar";
+import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
-import { Sidebar } from "../components/sidebar";
 import Dashboard from '../pages/Dashboard'
 
 function router() {
@@ -39,7 +38,7 @@ function router() {
                 path={route.path()}
               >
                 <>
-                  <Sidebar />
+                  
                   <Dashboard>
                     < route.component />
                   </Dashboard>

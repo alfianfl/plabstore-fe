@@ -1,5 +1,4 @@
 import React from "react";
-import { GridContainer, GridItem } from "../grid";
 import "../../assets/css/editProfile.css";
 import { Button } from "../buttons";
 

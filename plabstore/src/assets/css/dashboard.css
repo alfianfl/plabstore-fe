@@ -1,10 +1,12 @@
 #content {
-  margin-left: 250px;
-  padding-left: 2%;
-  padding-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 100vh;
   height: 100%;
-  background-color: #f1f1f1;
+  width: 100%;
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }
 
 #content .cart-body {
@@ -27,4 +29,8 @@
   border-radius: 5px;
   padding: 5px;
   /* width: 48%; */
+}
+
+.tables {
+  padding: 2rem;
 }

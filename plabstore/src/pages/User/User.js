@@ -1,9 +1,10 @@
 import React from 'react'
+import { BasicTable } from '../../components/table/BasicTable'
 
 function User() {
     return (
         <div>
-            user
+            <BasicTable />
         </div>
     )
 }
