@@ -1,10 +1,10 @@
 import React from 'react'
-import { BasicTable } from '../../components/table/BasicTable'
+import { TransferTable } from '../../components/table/TransferTable'
 
 function Transaksi() {
     return (
         <div>
-            <BasicTable />
+            <TransferTable />
         </div>
     )
 }

@@ -1,10 +1,10 @@
 import React from 'react'
-import { BasicTable } from '../../components/table/BasicTable'
+import { ProdukTable } from '../../components/table/ProdukTable'
 
 function ProductAdmin() {
     return (
         <div>
-            <BasicTable />
+            <ProdukTable />
         </div>
     )
 }
