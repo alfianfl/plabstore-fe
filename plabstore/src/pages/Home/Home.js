@@ -18,7 +18,7 @@ function Home() {
           </JustifyCenter>
         </GridItem>
         <GridItem xs={12} sm={6}>
-          <div className="mt-0 mt-md-0 px-lg-2 px-3 mt-lg-3">
+          <div className="mt-0 mt-md-0 px-lg-2 px-3 mt-lg-5">
             <h1>Make it easy!</h1>
             <p className="mt-0 mt-md-0 mx-lg-2 w-100 mt-lg-3">
               T-Shirt eCommerce help you build a website with custom products
@@ -39,7 +39,7 @@ function Home() {
         </GridItem>
         <GridItem xs={12} sm={12}>
           <span
-            className="ml-3 ml-lg-3"
+            className="ml-3 ml-lg-3 mt-5"
             style={{
               fontSize: "25px",
               marginBottom: "10px",
@@ -55,7 +55,7 @@ function Home() {
         </GridItem>
         <GridItem xs={12} sm={12}>
           <span
-            className=" ml-3 ml-lg-3 "
+            className=" ml-3 ml-lg-3"
             style={{
               fontSize: "25px",
               marginBottom: "10px",

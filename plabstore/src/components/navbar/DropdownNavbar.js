@@ -9,7 +9,7 @@ import { ModalLogin, ModalRegister } from "../modal";
 import { Link } from "react-router-dom";
 
 function DropdownNavbar() {
-  const { styles, ...props } = UseStyles();
+  const { styles } = UseStyles();
   const useStyles = makeStyles(styles);
   const classes = useStyles();
 
@@ -58,7 +58,9 @@ function DropdownNavbar() {
       >
         <MenuItem onClick={handleMenuClose}>Status Pemesanan</MenuItem>
       </Link>
-      <MenuItem onClick={handleMenuClose}>Wishlist</MenuItem>
+      <Link style={{ textDecoration: "none", color: "black" }} to={"/wishlist"}>
+        <MenuItem onClick={handleMenuClose}>Wishlist</MenuItem>
+      </Link>
       <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
     </Menu>
   ) : (
@@ -103,6 +105,9 @@ function DropdownNavbar() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <Link style={{ textDecoration: "none", color: "black" }} to={"/checkout"}>
+        <MenuItem onClick={handleMenuClose}>Keranjang Belanja</MenuItem>
+      </Link>
       <MenuItem onClick={handleMenuClose}>Riwayat Pembelian</MenuItem>
       <Link
         style={{ textDecoration: "none", color: "black" }}
@@ -110,7 +115,9 @@ function DropdownNavbar() {
       >
         <MenuItem onClick={handleMenuClose}>Status Pemesanan</MenuItem>
       </Link>
-      <MenuItem onClick={handleMenuClose}>Wishlist</MenuItem>
+      <Link style={{ textDecoration: "none", color: "black" }} to={"/wishlist"}>
+        <MenuItem onClick={handleMenuClose}>Wishlist</MenuItem>
+      </Link>
       <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
     </Menu>
   ) : (

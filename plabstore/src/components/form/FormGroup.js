@@ -1,7 +1,7 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
-import UseStyles from "../../hooks/UseStyles";
-import { makeStyles } from "@material-ui/core/styles";
+// import UseStyles from "../../hooks/UseStyles";
+// import { makeStyles } from "@material-ui/core/styles";
 
 export default function FormPropsTextFields({
   children,
@@ -9,9 +9,9 @@ export default function FormPropsTextFields({
   type,
   idForm,
 }) {
-  const { styles } = UseStyles();
-  const useStyles = makeStyles(styles);
-  const classes = useStyles();
+  // const { styles } = UseStyles();
+  // const useStyles = makeStyles(styles);
+  // const classes = useStyles();
 
   return (
     <form noValidate autoComplete="off">

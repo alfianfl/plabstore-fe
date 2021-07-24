@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ButtonCardSwipper() {
   return (
-    <a href="#" className="button">
+    <Link to="" className="button">
       Show more
-    </a>
+    </Link>
   );
 }
 

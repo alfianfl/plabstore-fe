@@ -5,7 +5,7 @@ import "../../assets/css/footer.css";
 function Footer() {
   return (
     <GridContainer>
-      <div className="footer">
+      <div className="footer pb-5 mt-5" style={{ paddingTop: "70px" }}>
         <GridItem xs={12} sm={12}>
           <div className="nav-footer">
             <GridContainer>

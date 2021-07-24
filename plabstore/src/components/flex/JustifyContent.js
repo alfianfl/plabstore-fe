@@ -12,10 +12,17 @@ export function JustifyStart(props) {
   );
 }
 export function JustifyCenter(props) {
-  const { children, ...rest } = props;
+  const { derection, children, ...rest } = props;
   return (
     <div style={{ width: "100%" }}>
-      <Box {...rest} display="flex" justifyContent="center" m={1} p={1}>
+      <Box
+        {...rest}
+        display="flex"
+        justifyContent="center"
+        flexDirection={derection}
+        m={1}
+        p={1}
+      >
         {children}
       </Box>
     </div>
@@ -32,10 +39,15 @@ export function JustifyEnd(props) {
   );
 }
 export function JustifyBetween(props) {
-  const { children, ...rest } = props;
+  const { derection, children, ...rest } = props;
   return (
     <div style={{ width: "100%" }}>
-      <Box {...rest} display="flex" justifyContent="space-between" m={1} p={1}>
+      <Box
+        {...rest}
+        display="flex"
+        justifyContent="space-between"
+        flexDirection={derection}
+      >
         {children}
       </Box>
     </div>

@@ -4,6 +4,8 @@ import {
   EditProfile,
   Produk,
   DetailProduct,
+  Wishlist,
+  Checkout,
   StatusPembelian,
 } from "../pages";
 export const routes = [
@@ -14,6 +16,22 @@ export const routes = [
     },
     exact: true,
     component: Home,
+  },
+  {
+    name: "Wishlist",
+    path: () => {
+      return "/wishlist";
+    },
+    exact: true,
+    component: Wishlist,
+  },
+  {
+    name: "Checkout",
+    path: () => {
+      return "/checkout";
+    },
+    exact: true,
+    component: Checkout,
   },
   {
     name: "Status Pembelian",
