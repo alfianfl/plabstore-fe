@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function CarouselHome() {
   return (
-    <div>
+    <div className="mb-5">
       <Carousel>
         <Carousel.Item interval={1000}>
           <img

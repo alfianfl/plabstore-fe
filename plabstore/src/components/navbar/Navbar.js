@@ -12,6 +12,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import UseDropdownMenu from "./DropdownNavbar";
 import Typography from "@material-ui/core/Typography";
+
+import { Link } from "react-router-dom";
 import { ModalLogin, ModalRegister } from "../modal";
 
 export default function Navbar() {
@@ -68,11 +70,16 @@ export default function Navbar() {
                   color="default"
                   aria-label="open drawer"
                 >
-                  <IconButton aria-label="show 4 new mails" color="inherit">
-                    <Badge badgeContent={4} color="secondary">
-                      <ShoppingBasketIcon />
-                    </Badge>
-                  </IconButton>
+                  <Link
+                    to="/checkout"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <IconButton aria-label="show 4 new mails" color="inherit">
+                      <Badge badgeContent={4} color="secondary">
+                        <ShoppingBasketIcon />
+                      </Badge>
+                    </IconButton>
+                  </Link>
                 </IconButton>
                 <IconButton
                   edge="end"

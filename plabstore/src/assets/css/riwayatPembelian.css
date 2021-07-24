@@ -1,0 +1,115 @@
+.riwayat {
+  font-family: Vollkorn;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.riwayat .voucher-form {
+  background-color: #fff;
+  width: 100%;
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-left: 10px;
+}
+
+.riwayat .checkout-form {
+  width: 100%;
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+  margin-left: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.riwayat .checkout-form .ganti-alamat {
+  color: #94d0cc;
+  transition: hover 0.3s;
+}
+
+.riwayat .checkout-form .ganti-alamat:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.riwayat .riwayat-thumbnail {
+  background-color: #fff;
+  width: 100%;
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+}
+
+.riwayat .riwayat-thumbnail .rounded-size {
+  background-color: #f29191;
+  width: 35px;
+  height: 35px;
+  font-size: 12px;
+  display: flex;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.riwayat .riwayat-thumbnail .thumb-button-category {
+  display: flex;
+}
+
+.riwayat .riwayat-thumbnail p {
+  color: #a7a7a7;
+}
+
+.riwayat .riwayat-thumbnail .hapus-wishlist:hover {
+  text-decoration: line-through black;
+  cursor: pointer;
+}
+
+.riwayat .riwayat-thumbnail .button-beli {
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+}
+
+.riwayat .riwayat-thumbnail .button-beli button:hover {
+  color: #504c4c;
+}
+
+@media (max-width: 540px) {
+  .riwayat .riwayat-thumbnail .rounded-size {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+  .riwayat .riwayat-thumbnail .thumb-button-category {
+    display: none;
+  }
+  .riwayat .riwayat-thumbnail h3,
+  .riwayat .riwayat-thumbnail strong {
+    font-size: 12px;
+  }
+  .riwayat .riwayat-thumbnail .hapus-wishlist {
+    font-size: 12px;
+  }
+  .riwayat .riwayat-thumbnail .button-beli button {
+    font-size: 11px;
+  }
+  .riwayat .riwayat-thumbnail p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 376px) {
+  .riwayat .riwayat-thumbnail h3,
+  .riwayat .riwayat-thumbnail strong {
+    font-size: 10px;
+  }
+  .riwayat .riwayat-thumbnail .hapus-wishlist {
+    font-size: 10px;
+  }
+  .riwayat .riwayat-thumbnail .button-beli button {
+    font-size: 8px;
+  }
+  .riwayat .riwayat-thumbnail p {
+    font-size: 8px;
+  }
+}

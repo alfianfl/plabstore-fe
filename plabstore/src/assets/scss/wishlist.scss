@@ -1,0 +1,76 @@
+.wishlist {
+  font-family: Vollkorn;
+  font-style: normal;
+  font-weight: normal;
+  .wishlist-thumbnail {
+    background-color: #fff;
+    width: 100%;
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    .thumb-button-category {
+      display: flex;
+    }
+    p {
+      color: #a7a7a7;
+    }
+    .hapus-wishlist {
+      &:hover {
+        text-decoration: line-through black;
+        cursor: pointer;
+      }
+    }
+    .button-beli {
+      border: 0.5px solid #000000;
+      box-sizing: border-box;
+
+      button {
+        &:hover {
+          color: #504c4c;
+        }
+      }
+    }
+  }
+  @media (max-width: 540px) {
+    .wishlist-thumbnail {
+      .thumb-button-category {
+        display: none;
+      }
+      h3,
+      strong {
+        font-size: 12px;
+      }
+      .hapus-wishlist {
+        font-size: 12px;
+      }
+      .button-beli {
+        button {
+          font-size: 11px;
+        }
+      }
+
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+  @media (max-width: 376px) {
+    .wishlist-thumbnail {
+      h3,
+      strong {
+        font-size: 10px;
+      }
+      .hapus-wishlist {
+        font-size: 10px;
+      }
+      .button-beli {
+        button {
+          font-size: 8px;
+        }
+      }
+
+      p {
+        font-size: 8px;
+      }
+    }
+  }
+}

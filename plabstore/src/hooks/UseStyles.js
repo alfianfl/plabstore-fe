@@ -4,12 +4,10 @@ function UseStyles() {
   const styles = (theme) => ({
     gridItem: {
       padding: "0  !important",
-      marginTop: "20px",
     },
     grid: {
       width: "unset",
       padding: "0px",
-      marginTop: "30px",
     },
     grow: {
       flexGrow: 1,

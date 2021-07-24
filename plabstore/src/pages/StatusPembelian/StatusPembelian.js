@@ -2,8 +2,22 @@ import React from "react";
 
 import { GridContainer, GridItem } from "../../components/grid";
 import { JustifyCenter } from "../../components/flex";
+import swal from "sweetalert";
 
 function StatusPembelian() {
+  const checkout = () => {
+    swal({
+      title: "Apakah barang sudah sampai?",
+      text: "Terima pesanan hanya ketika barang sudah sampai",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then(() =>
+      swal("Poof! Selamat pesanan telah diterima!", {
+        icon: "success",
+      })
+    );
+  };
   return (
     <GridContainer>
       <JustifyCenter>
@@ -30,7 +44,11 @@ function StatusPembelian() {
                   </td>
                   <td>
                     {" "}
-                    <button className="btn btn-success" id="TooltipExample">
+                    <button
+                      onClick={checkout}
+                      className="btn btn-success"
+                      id="TooltipExample"
+                    >
                       Terima Pesanan
                     </button>
                   </td>

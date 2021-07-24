@@ -5,3 +5,4 @@ export {
   JustifyEnd,
   JustifyBetween,
 } from "./JustifyContent";
+export { AlignAround, AlignBetween } from "./AlignContent";

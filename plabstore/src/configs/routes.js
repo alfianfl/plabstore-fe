@@ -4,10 +4,10 @@ import {
   EditProfile,
   Produk,
   DetailProduct,
+  Wishlist,
+  Checkout,
   StatusPembelian,
-  ProdukAdmin,
-  Transaksi,
-  User
+  RiwayatPembelian,
 } from "../pages";
 
 export const routes = [
@@ -18,6 +18,30 @@ export const routes = [
     },
     exact: true,
     component: Home,
+  },
+  {
+    name: "Wishlist",
+    path: () => {
+      return "/wishlist";
+    },
+    exact: true,
+    component: Wishlist,
+  },
+  {
+    name: "Riwayat Pembelian",
+    path: () => {
+      return "/riwayat-pembelian";
+    },
+    exact: true,
+    component: RiwayatPembelian,
+  },
+  {
+    name: "Checkout",
+    path: () => {
+      return "/checkout";
+    },
+    exact: true,
+    component: Checkout,
   },
   {
     name: "Status Pembelian",
