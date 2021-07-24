@@ -9,7 +9,6 @@ function App() {
       <div className="loader ">
         <div id="preloader" />
       </div>
-
       <Router />
     </div>
   );

@@ -1,17 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { GridContainer, GridItem } from "../../components/grid";
 import { Button } from "../../components/buttons";
 import { JustifyBetween, JustifyCenter } from "../../components/flex";
+
+import { ProductContext } from "../../contexts/productContext";
+
 import "../../assets/css/wishlist.css";
 
 function Wishlist() {
-  const [wishItem] = useState([{}, {}]);
+  const { products } = useContext(ProductContext);
+  const { dispatch } = useContext(ProductContext);
+
   return (
     <div className="wishlist px-lg-5 px-2 px-md-2 my-5">
       <GridContainer>
         <GridItem lg={12} sm={12}>
           <h1 className="text-center">Wishlist</h1>
-          {wishItem.map((item, index) => (
+          {products.map((item, index) => (
             <div
               key={index}
               className="wishlist-thumbnail py-3 px-lg-3 px-0 mt-lg-5 mt-3"
@@ -30,8 +35,8 @@ function Wishlist() {
                   <GridItem lg={8} xs={12} sm={12}>
                     <JustifyBetween>
                       <div className=" ml-3 ">
-                        <h3>Nama Pakaian</h3>
-                        <p>Deskripsi Singkat</p>
+                        <h3>{item.nama}</h3>
+                        <p>{item.deskripsi}</p>
                         <div
                           className="thumb-button-category"
                           style={{ width: "30%" }}
@@ -56,14 +61,30 @@ function Wishlist() {
                           </div>
                         </div>
                         <strong className=" mt-lg-0 mt-5 d-block">
-                          Rp 290.000
+                          Rp {item.harga}
                         </strong>
                       </div>
                       <div className="d-flex flex-column justify-content-between align-items-end">
-                        <span className="hapus-wishlist">Hapus</span>
+                        <span
+                          onClick={() =>
+                            dispatch({
+                              type: "REMOVE_PRODUCT",
+                              id: item.id,
+                            })
+                          }
+                          className="hapus-wishlist"
+                        >
+                          Hapus
+                        </span>
                         <div className="button-beli mt-lg-0 mt-5 ">
                           <button className="btn shadow-none">
-                            Beli Sekarang
+                            <a
+                              href="/checkout"
+                              style={{ textDecoration: "none", color: "black" }}
+                            >
+                              {" "}
+                              Beli Sekarang
+                            </a>
                           </button>
                         </div>
                       </div>

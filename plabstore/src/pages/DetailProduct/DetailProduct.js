@@ -64,10 +64,20 @@ function DetailProduct() {
                   </div>
                   <div className="d-flex my-4 w-100 justify-content-between">
                     <button className="btn-beli mr-1 mb-3">
-                      Tambah ke keranjang
+                      <a
+                        href="/checkout"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Tambah ke keranjang
+                      </a>
                     </button>
                     <button className="btn-wishlist mx-1 mb-3">
-                      Tambah ke wishlist
+                      <a
+                        style={{ textDecoration: "none", color: "white" }}
+                        href="/wishlist"
+                      >
+                        Tambah ke wishlist
+                      </a>
                     </button>
                   </div>
                 </div>
