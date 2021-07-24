@@ -7,6 +7,7 @@ import {
   Wishlist,
   Checkout,
   StatusPembelian,
+  RiwayatPembelian,
 } from "../pages";
 export const routes = [
   {
@@ -24,6 +25,14 @@ export const routes = [
     },
     exact: true,
     component: Wishlist,
+  },
+  {
+    name: "Riwayat Pembelian",
+    path: () => {
+      return "/riwayat-pembelian";
+    },
+    exact: true,
+    component: RiwayatPembelian,
   },
   {
     name: "Checkout",

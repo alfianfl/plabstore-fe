@@ -6,3 +6,4 @@ export { default as Produk } from "./Product";
 export { default as StatusPembelian } from "./StatusPembelian";
 export { default as Wishlist } from "./Wishlist";
 export { default as Checkout } from "./Checkout";
+export { default as RiwayatPembelian } from "./RiwayatPembelian";

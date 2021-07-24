@@ -51,7 +51,12 @@ function DropdownNavbar() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Riwayat Pembelian</MenuItem>
+      <Link
+        style={{ textDecoration: "none", color: "black" }}
+        to="/riwayat-pembelian"
+      >
+        <MenuItem onClick={handleMenuClose}>Riwayat Pembelian</MenuItem>
+      </Link>
       <Link
         style={{ textDecoration: "none", color: "black" }}
         to="/status-pembelian"
@@ -108,7 +113,12 @@ function DropdownNavbar() {
       <Link style={{ textDecoration: "none", color: "black" }} to={"/checkout"}>
         <MenuItem onClick={handleMenuClose}>Keranjang Belanja</MenuItem>
       </Link>
-      <MenuItem onClick={handleMenuClose}>Riwayat Pembelian</MenuItem>
+      <Link
+        style={{ textDecoration: "none", color: "black" }}
+        to="/riwayat-pembelian"
+      >
+        <MenuItem onClick={handleMenuClose}>Riwayat Pembelian</MenuItem>
+      </Link>
       <Link
         style={{ textDecoration: "none", color: "black" }}
         to="/status-pembelian"

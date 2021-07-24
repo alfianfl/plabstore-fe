@@ -2,7 +2,7 @@ import React from "react";
 import { CardSwiper } from "../../components/cards";
 import { CardProductSwiper } from "../../components/cards";
 import { GridContainer, GridItem } from "../../components/grid";
-import { JustifyCenter } from "../../components/flex";
+import { JustifyBetween, JustifyCenter } from "../../components/flex";
 import { Button } from "../../components/buttons";
 import { Banner } from "../../components/banners";
 import { Carousel } from "../../components/carousel";
@@ -38,32 +38,50 @@ function Home() {
           </div>
         </GridItem>
         <GridItem xs={12} sm={12}>
-          <span
-            className="ml-3 ml-lg-3 mt-5"
-            style={{
-              fontSize: "25px",
-              marginBottom: "10px",
-              display: "inline-block",
-            }}
-          >
-            <strong>“Pakaian Pria” </strong>pilihan
-          </span>
+          <JustifyBetween>
+            <span
+              className="ml-3 ml-lg-3 mt-5"
+              style={{
+                fontSize: "25px",
+                marginBottom: "10px",
+                display: "inline-block",
+              }}
+            >
+              <strong>“Pilihan" </strong>Pria
+            </span>
+
+            <p className=" mr-lg-3 mr-1 mt-auto">
+              {" "}
+              <a style={{ color: "black" }} href={"/produk"}>
+                Lihat Semua{" "}
+              </a>
+            </p>
+          </JustifyBetween>
           <CardProductSwiper />
         </GridItem>
         <GridItem xs={12} sm={12}>
           <Banner />
         </GridItem>
         <GridItem xs={12} sm={12}>
-          <span
-            className=" ml-3 ml-lg-3"
-            style={{
-              fontSize: "25px",
-              marginBottom: "10px",
-              display: "inline-block",
-            }}
-          >
-            <strong>“Pakaian Wanita” </strong>pilihan
-          </span>
+          <JustifyBetween>
+            <span
+              className=" ml-3 ml-lg-3"
+              style={{
+                fontSize: "25px",
+                marginBottom: "10px",
+                display: "inline-block",
+              }}
+            >
+              <strong>“Pilihan” </strong>Wanita
+            </span>
+
+            <p className=" mr-lg-3 mr-1 mt-auto">
+              {" "}
+              <a style={{ color: "black" }} href={"/produk"}>
+                Lihat Semua{" "}
+              </a>
+            </p>
+          </JustifyBetween>
           <CardProductSwiper />
         </GridItem>
       </GridContainer>

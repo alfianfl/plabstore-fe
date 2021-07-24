@@ -21,6 +21,10 @@ function CardProduct() {
     { id: 10 },
     { id: 11 },
     { id: 12 },
+    { id: 13 },
+    { id: 14 },
+    { id: 15 },
+    { id: 16 },
   ]);
   const [sizes] = useState([
     { size: "S" },
@@ -31,7 +35,7 @@ function CardProduct() {
   ]);
   const [pageNumber, setPageNumber] = useState(0);
 
-  const usersPerPage = 8;
+  const usersPerPage = 12;
   const pagesVisited = pageNumber * usersPerPage;
 
   const pageCount = Math.ceil(products.length / usersPerPage);
