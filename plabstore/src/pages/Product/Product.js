@@ -1,14 +1,17 @@
 import React from "react";
 import { CardProduct } from "../../components/cards";
-
+import { Carousel } from "../../components/carousel";
 function Product() {
   return (
-    <div className="product my-5">
-      <div className="title text-center">
-        <h1>List Produk</h1>
+    <>
+      <Carousel />
+      <div className="product my-5">
+        <div className="title text-center">
+          <h1>List Produk</h1>
+        </div>
+        <CardProduct />
       </div>
-      <CardProduct />
-    </div>
+    </>
   );
 }
 
