@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { GridContainer, GridItem } from "../../components/grid";
 import { Button } from "../../components/buttons";
 import { JustifyBetween, JustifyCenter } from "../../components/flex";
@@ -11,15 +11,6 @@ import "../../assets/css/wishlist.css";
 function Wishlist() {
   const { products } = useContext(ProductContext);
   const { dispatch } = useContext(ProductContext);
-  const [qty, setQTY] = useState(0);
-
-  const qtyProduct = (name) => {
-    if (name == "plus") {
-      setQTY((prevState) => prevState + 1);
-    } else {
-      setQTY((prevState) => prevState - 1);
-    }
-  };
 
   return (
     <div className="wishlist px-lg-5 px-2 px-md-2 my-5">
@@ -91,28 +82,7 @@ function Wishlist() {
                         >
                           <BsFillTrashFill />
                         </span>
-                        <div className="qty-product">
-                          <div class="number">
-                            <span
-                              class="minus"
-                              onClick={() => qtyProduct("minus")}
-                            >
-                              -
-                            </span>
-                            <input
-                              type="text"
-                              value={qty < 0 ? 0 : qty}
-                              disabled
-                            />
-                            <span
-                              class="plus"
-                              name="plus"
-                              onClick={() => qtyProduct("plus")}
-                            >
-                              +
-                            </span>
-                          </div>
-                        </div>
+
                         <div className="mt-lg-0 mt-3 ">
                           <li class="content__item">
                             <button class="button button--anthe">

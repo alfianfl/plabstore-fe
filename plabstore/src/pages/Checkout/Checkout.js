@@ -5,41 +5,23 @@ import "../../assets/css/checkout.css";
 import { TextField } from "../../components/form";
 import { Button } from "../../components/buttons";
 
+import UseQtyHandler from "../../hooks/UseQtyHandler";
+
 import { BsFillTrashFill } from "@react-icons/all-files/bs/BsFillTrashFill";
 
 function Checkout() {
-  const [wishItem, setWishItem] = useState([
+  const { value, addProduct, removeProduct } = UseQtyHandler([
     { id: 2, qty: 10 },
     { id: 5, qty: 5 },
   ]);
   const [sizes] = useState([{ size: "S" }]);
 
-  const addProduct = (id) => {
-    const exist = wishItem.find((product) => product.id === id);
-    if (exist) {
-      setWishItem(
-        wishItem.map((product) =>
-          product.id === id ? { ...exist, qty: exist.qty + 1 } : product
-        )
-      );
-    }
-  };
-  const removeProduct = (id) => {
-    const exist = wishItem.find((product) => product.id === id);
-    if (exist) {
-      setWishItem(
-        wishItem.map((product) =>
-          product.id === id ? { ...exist, qty: exist.qty - 1 } : product
-        )
-      );
-    }
-  };
   return (
     <div className="checkout px-lg-4 px-2 px-md-2 my-5">
       <h1 className="text-center">Shopping Bag</h1>
       <GridContainer>
         <GridItem lg={8} xs={12}>
-          {wishItem.map((item, index) => (
+          {value.map((item, index) => (
             <div
               key={index}
               className="checkout-thumbnail py-3 px-lg-3 px-0 mt-lg-5 mt-3 "
