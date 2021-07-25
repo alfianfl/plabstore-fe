@@ -6,7 +6,8 @@ const initialValue = [
   {
     id: 1,
     nama: "Kaos polo lev`is",
-    deskripsi: "kaos dengan kualitas terbaik",
+    deskripsi:
+      "kaos dengan kualitas terbaik dibuat dengan bahan yang tahan panas kaos dengan kualitas terbaik dibuat dengan bahan yang tahan panas",
     harga: 250000,
     qty: 5,
   },

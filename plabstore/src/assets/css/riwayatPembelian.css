@@ -7,7 +7,8 @@
 .riwayat .voucher-form {
   background-color: #fff;
   width: 100%;
-  border: 0.5px solid #000000;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   box-sizing: border-box;
   padding: 20px;
   margin-left: 10px;
@@ -15,7 +16,8 @@
 
 .riwayat .checkout-form {
   width: 100%;
-  border: 0.5px solid #000000;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   box-sizing: border-box;
   margin-left: 10px;
   padding-top: 40px;
@@ -35,7 +37,8 @@
 .riwayat .riwayat-thumbnail {
   background-color: #fff;
   width: 100%;
-  border: 0.5px solid #000000;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
@@ -60,8 +63,13 @@
   color: #a7a7a7;
 }
 
+.riwayat .riwayat-thumbnail .hapus-wishlist {
+  color: #f50057;
+  font-size: 20px;
+}
+
 .riwayat .riwayat-thumbnail .hapus-wishlist:hover {
-  text-decoration: line-through black;
+  color: #b10541;
   cursor: pointer;
 }
 

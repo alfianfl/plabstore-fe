@@ -1,12 +1,17 @@
 import React from "react";
 import { Swiper } from "swiper/react";
-import SwiperCore, { EffectCoverflow, Pagination } from "swiper/core";
+import SwiperCore, {
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+} from "swiper/core";
 import "../../assets/css/cardSwipper.css";
 import "swiper/swiper.min.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
 
-SwiperCore.use([EffectCoverflow, Pagination]);
+SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 export function SwiperCoverflow(props) {
   const { children, ...rest } = props;
@@ -83,6 +88,7 @@ export function SwiperBasic(props) {
     <Swiper
       {...rest}
       loop={true}
+      navigation={true}
       spaceBetween={-30}
       slidesPerView={1}
       breakpoints={{

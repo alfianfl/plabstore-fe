@@ -13,7 +13,7 @@ function CardSwiper() {
             <div className="cards">
               <div className="cards-content">
                 <h4 className="cards-title">Something awsome</h4>
-                <p className="cards-body">
+                <p className="cards-body mb-4">
                   T-Shirt eCommerce help you build a website with custom
                   products and sale online.
                 </p>
@@ -30,7 +30,7 @@ function CardSwiper() {
             <div className="cards">
               <div className="cards-content">
                 <h4 className="cards-title">Something awsome</h4>
-                <p className="cards-body">
+                <p className="cards-body mb-4">
                   T-Shirt eCommerce help you build a website with custom
                   products and sale online.
                 </p>

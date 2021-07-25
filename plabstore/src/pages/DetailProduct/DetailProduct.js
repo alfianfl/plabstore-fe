@@ -66,15 +66,25 @@ function DetailProduct() {
                     <button className="btn-beli mr-1 mb-3">
                       <a
                         href="/checkout"
-                        style={{ textDecoration: "none", color: "white" }}
+                        className="w-100"
+                        style={{
+                          textDecoration: "none",
+                          color: "white",
+                          display: "block",
+                        }}
                       >
                         Tambah ke keranjang
                       </a>
                     </button>
                     <button className="btn-wishlist mx-1 mb-3">
                       <a
-                        style={{ textDecoration: "none", color: "white" }}
                         href="/wishlist"
+                        className="w-100"
+                        style={{
+                          textDecoration: "none",
+                          color: "white",
+                          display: "block",
+                        }}
                       >
                         Tambah ke wishlist
                       </a>
