@@ -12,6 +12,13 @@
   font-size: 11px;
 }
 
+@media (max-width: 769px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
 .swiper-button-next:after {
   position: relative;
   left: 2px;
