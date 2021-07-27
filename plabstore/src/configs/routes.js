@@ -92,28 +92,28 @@ export const routeAdmin = [
   {
     name: "DefaultDashboard",
     path: () => {
-      return "/";
+      return "/dashboard";
     },
     component: ProdukAdmin,
   },
   {
     name: "ProdukAdmin",
     path: () => {
-      return "/ProdukAdmin";
+      return "/dashboard/produk";
     },
     component: ProdukAdmin,
   },
   {
     name: "Transaksi",
     path: () => {
-      return "/Transaksi";
+      return "/dashboard/transaksi";
     },
     component: Transaksi,
   },
   {
     name: "User",
     path: () => {
-      return "/User";
+      return "/dashboard/user";
     },
     component: User,
   },

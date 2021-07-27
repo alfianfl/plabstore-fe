@@ -24,13 +24,15 @@
 
 .btn-hapus {
   background-color: white;
-  color: #184d47;
-  border: 1px solid #184d47;
+  color: #554fc5;
+  border: 1px solid #554fc5;
   border-radius: 5px;
   padding: 5px;
+  font-size: small;
   /* width: 48%; */
 }
 
 .tables {
   padding: 2rem;
+  width: 100%;
 }

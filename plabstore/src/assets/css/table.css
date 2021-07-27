@@ -2,9 +2,13 @@ table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  overflow: hidden;
+  border-collapse: separate;
+  border-radius: 1rem;
 }
 
-table td, table th {
+table td,
+table th {
   border: 1px solid #ddd;
   padding: 8px;
 }
@@ -23,4 +27,69 @@ table th {
   text-align: center;
   background-color: #e4e4e4;
   color: #554fc5;
+}
+
+.table-entry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.table-pagination {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table-name h1 {
+  color: #554fc5;
+}
+
+.btn-pagination {
+  background-color: #554fc5;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.btn-pagination:disabled {
+  background-color: #8a86d3;
+}
+
+.btn-kirim {
+  background-color: #554fc5;
+  color: #fff;
+  border: none;
+  padding: 0.35rem;
+  border-radius: 20px;
+  font-size: small;
+}
+
+.table-search {
+  outline: none;
+  border: 2px solid #8a86d3;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+}
+
+.table-search:focus {
+  border: 2px solid #554fc5;
 }

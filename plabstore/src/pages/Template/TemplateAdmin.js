@@ -3,7 +3,7 @@ import '../../assets/css/dashboard.css'
 import Sidebar from '../../components/sidebar/Sidebar'
 
 
-function Dashboard({ children }) {
+function TemplateAdmin({ children }) {
     return (
         <div id="content">
             <Sidebar />
@@ -14,4 +14,4 @@ function Dashboard({ children }) {
     )
 }
 
-export default Dashboard
+export default TemplateAdmin

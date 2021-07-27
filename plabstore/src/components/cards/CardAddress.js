@@ -1,13 +1,16 @@
 import React from "react";
 import "../../assets/css/editProfile.css";
 import { Link } from "react-router-dom";
+import { ModalAddress } from '../modal'
 
 function CardAddress() {
   return (
     <div className="detail-profile-container ">
       <div className="">Ubah Daftar Alamat</div>
       <div className="mt-5">
-        <button className="btn-white w-50">Tambah Alamat Baru</button>
+        <ModalAddress>
+          <button className="btn-white w-50">Tambah Alamat Baru</button>
+        </ModalAddress>
       </div>
       <div className="address-container mt-2">
         <div className="d-flex justify-content-between">

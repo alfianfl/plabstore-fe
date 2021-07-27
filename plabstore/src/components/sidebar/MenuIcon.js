@@ -6,7 +6,7 @@ function MenuIcon() {
 
     const click = () => {
         document.getElementById("menuContainer").classList.toggle("change")
-        // document.getElementById("content").classList.toggle("toggle-sidebar")
+        document.getElementById("sidebar").classList.toggle("toggle-sidebar")
     }
 
 
