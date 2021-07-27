@@ -7,6 +7,9 @@ import {
   Wishlist,
   Checkout,
   StatusPembelian,
+  ProdukAdmin,
+  Transaksi,
+  User,
   RiwayatPembelian,
 } from "../pages";
 

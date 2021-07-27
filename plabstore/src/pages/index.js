@@ -5,6 +5,9 @@ export { default as Dashboard } from "./Dashboard"
 export { default as DetailProduct } from "./DetailProduct";
 export { default as Produk } from "./Product";
 export { default as StatusPembelian } from "./StatusPembelian";
+export { default as ProdukAdmin } from './ProductAdmin'
+export { default as Transaksi } from './Transaksi'
+export { default as User } from './User'
 export { default as Wishlist } from "./Wishlist";
 export { default as Checkout } from "./Checkout";
 export { default as RiwayatPembelian } from "./RiwayatPembelian";
