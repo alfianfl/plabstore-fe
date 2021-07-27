@@ -17,6 +17,9 @@ $padding-content: 1em;
   border-radius: 0.5em;
   overflow: hidden;
   transition: transform 500ms ease;
+  .cards-body {
+    font-size: 15px;
+  }
   .cards-content {
     padding: $padding-content;
     padding-bottom: 1.5em;

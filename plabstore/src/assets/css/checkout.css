@@ -7,7 +7,8 @@
 .checkout .voucher-form {
   background-color: #fff;
   width: 100%;
-  border: 0.5px solid #000000;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   box-sizing: border-box;
   padding: 20px;
   margin-left: 10px;
@@ -15,7 +16,8 @@
 
 .checkout .checkout-form {
   width: 100%;
-  border: 0.5px solid #000000;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   box-sizing: border-box;
   margin-left: 10px;
   padding-top: 40px;
@@ -32,12 +34,42 @@
   cursor: pointer;
 }
 
+.checkout .qty-product span {
+  cursor: pointer;
+}
+
+.checkout .qty-product .minus,
+.checkout .qty-product .plus {
+  width: 28px;
+  margin: 3px;
+  height: 30px;
+  background: #94d0cc;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.checkout .qty-product input {
+  height: 30px;
+  width: 70px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .checkout .checkout-thumbnail {
   background-color: #fff;
   position: relative;
   right: 10px;
   width: 100%;
-  border: 0.5px solid #000000;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
@@ -62,8 +94,13 @@
   color: #a7a7a7;
 }
 
+.checkout .checkout-thumbnail .hapus-wishlist {
+  color: #f50057;
+  font-size: 20px;
+}
+
 .checkout .checkout-thumbnail .hapus-wishlist:hover {
-  text-decoration: line-through black;
+  color: #b10541;
   cursor: pointer;
 }
 
@@ -91,6 +128,21 @@
 }
 
 @media (max-width: 540px) {
+  .checkout .qty-product span {
+    cursor: pointer;
+  }
+  .checkout .qty-product .minus,
+  .checkout .qty-product .plus {
+    font-size: 11px;
+    width: 18px;
+    margin: 1px;
+    height: 20px;
+  }
+  .checkout .qty-product input {
+    height: 20px;
+    font-size: 11px;
+    width: 35px;
+  }
   .checkout .checkout-thumbnail .rounded-size {
     width: 20px;
     height: 20px;
@@ -126,6 +178,19 @@
     font-size: 8px;
   }
   .checkout .checkout-thumbnail p {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .checkout .checkout-thumbnail .btn-kuantitas {
+    display: none;
+  }
+  .checkout .checkout-thumbnail .kuantitas {
+    display: none;
+  }
+  .checkout .checkout-thumbnail h3,
+  .checkout .checkout-thumbnail strong {
     font-size: 8px;
   }
 }

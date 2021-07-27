@@ -5,14 +5,16 @@
   .voucher-form {
     background-color: #fff;
     width: 100%;
-    border: 0.5px solid #000000;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     box-sizing: border-box;
     padding: 20px;
     margin-left: 10px;
   }
   .checkout-form {
     width: 100%;
-    border: 0.5px solid #000000;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     box-sizing: border-box;
     margin-left: 10px;
     padding-top: 40px;
@@ -26,12 +28,43 @@
       }
     }
   }
+  .qty-product {
+    span {
+      cursor: pointer;
+    }
+
+    .minus,
+    .plus {
+      width: 28px;
+      margin: 3px;
+      height: 30px;
+      background: rgb(148, 208, 204);
+      color: #fff;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+    }
+    input {
+      height: 30px;
+      width: 70px;
+      text-align: center;
+      font-size: 18px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
   .checkout-thumbnail {
     background-color: #fff;
     position: relative;
     right: 10px;
     width: 100%;
-    border: 0.5px solid #000000;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
     box-sizing: border-box;
 
     .rounded-size {
@@ -54,8 +87,10 @@
       color: #a7a7a7;
     }
     .hapus-wishlist {
+      color: #f50057;
+      font-size: 20px;
       &:hover {
-        text-decoration: line-through black;
+        color: #b10541;
         cursor: pointer;
       }
     }
@@ -75,6 +110,7 @@
       margin-left: 0px;
       width: 10;
     }
+
     .checkout-form {
       margin-left: 0px;
     }
@@ -84,6 +120,24 @@
     }
   }
   @media (max-width: 540px) {
+    .qty-product {
+      span {
+        cursor: pointer;
+      }
+
+      .minus,
+      .plus {
+        font-size: 11px;
+        width: 18px;
+        margin: 1px;
+        height: 20px;
+      }
+      input {
+        height: 20px;
+        font-size: 11px;
+        width: 35px;
+      }
+    }
     .checkout-thumbnail {
       .rounded-size {
         width: 20px;
@@ -127,6 +181,20 @@
       }
 
       p {
+        font-size: 8px;
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    .checkout-thumbnail {
+      .btn-kuantitas {
+        display: none;
+      }
+      .kuantitas {
+        display: none;
+      }
+      h3,
+      strong {
         font-size: 8px;
       }
     }

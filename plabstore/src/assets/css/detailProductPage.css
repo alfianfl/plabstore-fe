@@ -120,13 +120,9 @@
   width: 48%;
 }
 
-.detail-produk .btn-keranjang {
-  background-color: white;
-  color: #184d47;
-  border: 4px solid #184d47;
-  border-radius: 5px;
-  padding: 5px;
-  width: 48%;
+.detail-produk .btn-beli:hover,
+.detail-produk .btn-wishlist:hover {
+  background-color: #63a5a1;
 }
 
 .detail-produk .thumb-toko {

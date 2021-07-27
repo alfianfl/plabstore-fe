@@ -3,6 +3,8 @@ import { GridContainer, GridItem } from "../../components/grid";
 import { JustifyBetween, JustifyCenter } from "../../components/flex";
 import "../../assets/css/riwayatPembelian.css";
 
+import { BsFillTrashFill } from "@react-icons/all-files/bs/BsFillTrashFill";
+
 function RiwayatPembelian() {
   const [items] = useState([{}, {}]);
   const [sizes] = useState([{ size: "S" }]);
@@ -46,7 +48,10 @@ function RiwayatPembelian() {
                         </strong>
                       </div>
                       <div className="d-flex flex-column justify-content-between align-items-end">
-                        <span className="hapus-wishlist">Hapus</span>
+                        <span className="hapus-wishlist">
+                          {" "}
+                          <BsFillTrashFill />
+                        </span>
                         <div className=" mt-lg-0 mt-2 ">
                           <strong>Total: Rp 540.000</strong>
                         </div>

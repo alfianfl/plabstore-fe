@@ -2,6 +2,39 @@
   color: gold;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: black;
+  background-color: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 11px;
+}
+
+@media (max-width: 769px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+.swiper-button-next:after {
+  position: relative;
+  left: 2px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.swiper-button-prev:after {
+  position: relative;
+  right: 2px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
 .padding-0 {
   padding-right: 0;
   padding-left: 0;

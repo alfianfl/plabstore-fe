@@ -13,6 +13,10 @@
   transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
+.cards .cards-body {
+  font-size: 15px;
+}
+
 .cards .cards-content {
   padding: 1em;
   padding-bottom: 1.5em;

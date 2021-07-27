@@ -5,15 +5,23 @@ import "../../assets/css/checkout.css";
 import { TextField } from "../../components/form";
 import { Button } from "../../components/buttons";
 
+import UseQtyHandler from "../../hooks/UseQtyHandler";
+
+import { BsFillTrashFill } from "@react-icons/all-files/bs/BsFillTrashFill";
+
 function Checkout() {
-  const [wishItem] = useState([{}, {}]);
+  const { value, addProduct, removeProduct } = UseQtyHandler([
+    { id: 2, qty: 10 },
+    { id: 5, qty: 5 },
+  ]);
   const [sizes] = useState([{ size: "S" }]);
+
   return (
     <div className="checkout px-lg-4 px-2 px-md-2 my-5">
       <h1 className="text-center">Shopping Bag</h1>
       <GridContainer>
         <GridItem lg={8} xs={12}>
-          {wishItem.map((item, index) => (
+          {value.map((item, index) => (
             <div
               key={index}
               className="checkout-thumbnail py-3 px-lg-3 px-0 mt-lg-5 mt-3 "
@@ -36,19 +44,41 @@ function Checkout() {
                       <div className=" ml-3 ">
                         <h3>Nama Pakaian</h3>
 
-                        <div className="rounded-size my-lg-4 my-2 ">
+                        <div className="rounded-size my-lg-4 my-3 ">
                           {sizes.map((size, index) => (
                             <div key={index}>{size.size}</div>
                           ))}
                         </div>
-                        <strong>Jumlah : 3</strong>
 
-                        <strong className=" mt-lg-0 mt-2 d-block">
+                        <strong className=" mt-lg-0 mt-4 d-block">
                           Rp 290.000
                         </strong>
                       </div>
                       <div className="d-flex flex-column justify-content-between align-items-end">
-                        <span className="hapus-wishlist">Hapus</span>
+                        <span className="hapus-wishlist">
+                          <BsFillTrashFill />
+                        </span>
+                        <div className="qty-product">
+                          <div class="number">
+                            <span
+                              class="minus"
+                              onClick={() => removeProduct(item.id)}
+                            >
+                              -
+                            </span>
+                            <input
+                              type="text"
+                              value={item.qty < 0 ? 0 : item.qty}
+                              disabled
+                            />
+                            <span
+                              class="plus"
+                              onClick={() => addProduct(item.id)}
+                            >
+                              +
+                            </span>
+                          </div>
+                        </div>
                         <div className=" mt-lg-0 mt-2 ">
                           <strong>Total: Rp 540.000</strong>
                         </div>

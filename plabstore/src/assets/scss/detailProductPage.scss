@@ -98,15 +98,10 @@
     border-radius: 5px;
     padding: 5px;
     width: 48%;
-  }
 
-  .btn-keranjang {
-    background-color: white;
-    color: #184d47;
-    border: 4px solid #184d47;
-    border-radius: 5px;
-    padding: 5px;
-    width: 48%;
+    &:hover {
+      background-color: rgb(99, 165, 161);
+    }
   }
 
   .thumb-toko {
