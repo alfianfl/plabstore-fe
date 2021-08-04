@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import { TransferTable } from '../../components/table/TransferTable'
 import MenuIcon from '../../components/sidebar/MenuIcon'
 import Table from '../../components/table/Table'
 import MOCK_DATA_TRANSAKSI from '../../dummy_data/MOCK_DATA_TRANSAKSI.json'
@@ -9,6 +8,7 @@ function Transaksi() {
 
     function selectRow(row) {
         setSelectedRow(row)
+        console.log(selectedRow)
     }
 
     const TRANSACTION = [
@@ -24,7 +24,7 @@ function Transaksi() {
             Cell:()=>{
                 return (
                     <div className="d-flex justify-content-center">
-                        bukti pembayaran
+                        Bukti pembayaran
                     </div>
                 )
             }

@@ -14,6 +14,13 @@ const addProductForm = [
     { label: "Harga", name: "harga", type: "number" },
 ]
 
+const defaultValue = {
+    nama: "Kaos Kemeja",
+    deskripsi: "Kaos Kemeja pria siap pakai berbagai ukuran",
+    stok: 200 ,
+    harga: 270000 ,
+}
+
 const schema = yup.object().shape({
     nama: yup.string().required(),
     deskripsi: yup.string().required(),
@@ -21,9 +28,10 @@ const schema = yup.object().shape({
     harga: yup.string().required(),
 })
 
-function AddProduct() {
+function EditProduct() {
     const { register, handleSubmit, watch } = useForm({
         resolver: yupResolver(schema),
+        defaultValues: defaultValue,
         mode: "onTouched"
     })
 
@@ -43,7 +51,7 @@ function AddProduct() {
             </Link>
             <div>
                 <div className="add-product">
-                    <h3 className="mb-5">Tambah Produk</h3>
+                    <h3 className="mb-5">Edit Produk</h3>
                     <form action="" className="w-100 my-5" onSubmit={handleSubmit(submitProduct)}>
                         {addProductForm.map((form, index) => (
                             <div key={index} className="my-2">
@@ -109,4 +117,4 @@ function AddProduct() {
     )
 }
 
-export default AddProduct
+export default EditProduct

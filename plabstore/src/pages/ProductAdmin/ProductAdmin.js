@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import MenuIcon from '../../components/sidebar/MenuIcon'
 import Table from '../../components/table/Table'
 import MOCK_DATA_PRODUK from '../../dummy_data/MOCK_DATA_PRODUK.json'
 
 function ProductAdmin() {
-    const [selectedRow, setSelectedRow] = useState({})
 
-    function selectRow(row) {
-        setSelectedRow(row)
+    const deleteRow = (id) => {
+        console.log('delete produk dengan id ' + id)
     }
 
     const PRODUK = [
@@ -18,12 +17,14 @@ function ProductAdmin() {
         { Header: 'Harga', accessor: 'harga' },
         { Header: 'Kategori', accessor: 'kategori' },
         {
-            Header:'Aksi',
-            Cell:(props)=>{
+            Header: 'Aksi',
+            Cell: (props) => {
                 return (
                     <div className="d-flex justify-content-center">
-                        <button className="btn-hapus mx-1" onClick={() => selectRow(props.row.values)}>Edit</button>
-                        <button className="btn-hapus mx-1" onClick={() => selectRow(props.row.values)}>Hapus</button>
+                        <Link to={`/dashboard/produk/edit/${props.row.original.id}`}>
+                            <button className="btn-hapus mx-1">Edit</button>
+                        </Link>
+                        <button className="btn-hapus mx-1" onClick={() => deleteRow(props.row.original.id)}>Hapus</button>
                     </div>
                 )
             }

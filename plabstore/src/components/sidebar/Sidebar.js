@@ -20,6 +20,9 @@ function Sidebar() {
                     <Link className="nav-link" to="/dashboard/user">User</Link>
                 </li>
                 <li className="nav-item mb-2">
+                    <Link className="nav-link" to="/dashboard/diskon">Diskon</Link>
+                </li>
+                <li className="nav-item mb-2">
                     <Link className="nav-link" to="/">Logout</Link>
                 </li>
             </ul>

@@ -11,7 +11,10 @@ import {
   Transaksi,
   User,
   RiwayatPembelian,
-  AddProduct
+  AddProduct,
+  EditProduct,
+  Diskon,
+  EditDiskon
 } from "../pages";
 
 export const routes = [
@@ -124,5 +127,26 @@ export const routeAdmin = [
       return "/dashboard/produk/add";
     },
     component: AddProduct,
+  },
+  {
+    name: "EditProduct",
+    path: () => {
+      return "/dashboard/produk/edit/:id";
+    },
+    component: EditProduct,
+  },
+  {
+    name: "Diskon",
+    path: () => {
+      return "/dashboard/diskon";
+    },
+    component: Diskon,
+  },
+  {
+    name: "EditDiskon",
+    path: () => {
+      return "/dashboard/diskon/edit/:id";
+    },
+    component: EditDiskon,
   },
 ]

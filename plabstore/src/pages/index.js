@@ -11,3 +11,6 @@ export { default as Wishlist } from "./Wishlist";
 export { default as Checkout } from "./Checkout";
 export { default as RiwayatPembelian } from "./RiwayatPembelian";
 export { default as AddProduct } from "./AddProduct";
+export { default as EditProduct } from "./EditProduct";
+export { default as Diskon } from "./Diskon";
+export { default as EditDiskon } from "./EditDiskon";

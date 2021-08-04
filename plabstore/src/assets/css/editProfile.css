@@ -60,6 +60,13 @@
   border-radius: 20px;
 }
 
+.edit-profile .detail-profile-container .profile-pict img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  /* remove extra space below image */
+}
+
 .edit-profile .detail-profile-container .btn-white {
   background-color: white;
   border: 1px solid black;

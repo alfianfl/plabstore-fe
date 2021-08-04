@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { GridContainer, GridItem } from "../../components/grid";
 import "../../assets/css/editProfile.css";
 import CardBio from "../../components/cards/CardBio";
 import { CardAddress } from "../../components/cards";
