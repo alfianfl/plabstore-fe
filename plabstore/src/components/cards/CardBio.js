@@ -8,9 +8,8 @@ import useProfile from "../../hooks/useProfile";
 
 const schema = yup.object().shape({
     nama: yup.string().required(),
-    deskripsi: yup.string().required(),
-    stok: yup.string().required(),
-    harga: yup.string().required(),
+    email: yup.string().required(),
+    telp: yup.string().required(),
 })
 
 const defaultValue = {
