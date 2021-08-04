@@ -6,6 +6,8 @@ import { JustifyBetween, JustifyCenter } from "../../components/flex";
 import { Button } from "../../components/buttons";
 import { Banner } from "../../components/banners";
 import { Carousel } from "../../components/carousel";
+import { FloatingWhatsApp } from "react-floating-whatsapp-button";
+import "react-floating-whatsapp-button/dist/index.css";
 
 function Home() {
   return (
@@ -85,6 +87,12 @@ function Home() {
           <CardProductSwiper />
         </GridItem>
       </GridContainer>
+      <FloatingWhatsApp
+        position="right"
+        zIndex={999}
+        size="55px"
+        phone="089524013023"
+      />
     </>
   );
 }

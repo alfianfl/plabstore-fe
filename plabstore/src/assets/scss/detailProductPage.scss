@@ -2,6 +2,26 @@
   background-color: white;
   width: 100%;
 
+  .thumb-other-image {
+    img {
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  #lens {
+    z-index: 2;
+    position: absolute;
+    height: 125px;
+    width: 125px;
+
+    background-repeat: no-repeat;
+
+    cursor: none;
+  }
   /* The container */
   .container-radio {
     transition: transform 500ms ease;

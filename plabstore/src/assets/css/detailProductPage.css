@@ -11,6 +11,24 @@
   overflow: hidden;
 }
 
+.detail-produk .thumb-other-image img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.detail-produk .thumb-other-image img:hover {
+  opacity: 0.5;
+}
+
+.detail-produk #lens {
+  z-index: 2;
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  background-repeat: no-repeat;
+  cursor: none;
+}
+
 .detail-produk .container-radio {
   transition: transform 500ms ease;
   display: block;

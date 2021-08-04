@@ -35,7 +35,7 @@ function CardProduct() {
   ]);
   const [pageNumber, setPageNumber] = useState(0);
 
-  const usersPerPage = 12;
+  const usersPerPage = 6;
   const pagesVisited = pageNumber * usersPerPage;
 
   const pageCount = Math.ceil(products.length / usersPerPage);
@@ -44,13 +44,29 @@ function CardProduct() {
     setPageNumber(selected);
   };
   return (
-    <div className="product">
+    <div className="product" id="product-list">
       <div className="container-fluid">
+        <div className="d-lg-flex d-none justify-content-between align-items-center d-mobile">
+          <h2>List Product</h2>
+          <div>
+            <ReactPaginate
+              previousLabel={"previous"}
+              nextLabel={"next"}
+              pageCount={pageCount}
+              onPageChange={changePage}
+              containerClassName={"paginationBttns"}
+              previousLinkClassName={"previousBttn"}
+              nextLinkClassName={"nextBttn"}
+              disabledClassName={"paginationDisabled"}
+              activeClassName={"paginationActive"}
+            />
+          </div>
+        </div>
         <div className="row justify-content-md-center justify-content-lg-start">
           {products
             .slice(pagesVisited, pagesVisited + usersPerPage)
             .map((product) => (
-              <div className="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center mx-lg-0 my-4 mx-md-5 mx-0">
+              <div className="col-lg-4 col-md-4 col-sm-6 col-12 d-flex justify-content-center mx-lg-0 mb-4 mt-0 mx-md-5 mx-0">
                 <div className="mx-lg-0 mx-3">
                   <div className="card-product">
                     <div

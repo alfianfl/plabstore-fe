@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
+import StoreIcon from "@material-ui/icons/Store";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import UseStyles from "../../hooks/UseStyles";
 import InputBase from "@material-ui/core/InputBase";
@@ -65,6 +66,22 @@ export default function Navbar() {
           <div className={classes.sectionDesktop}>
             {isLogin ? (
               <>
+                <IconButton
+                  edge="start"
+                  color="default"
+                  aria-label="open drawer"
+                >
+                  <Link
+                    to="/produk"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <IconButton color="inherit">
+                      <Badge badgeContent={"new"} color="secondary">
+                        <StoreIcon />
+                      </Badge>
+                    </IconButton>
+                  </Link>
+                </IconButton>
                 <IconButton
                   edge="start"
                   color="default"

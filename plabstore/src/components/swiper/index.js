@@ -1,1 +1,6 @@
-export { SwiperCoverflow, SwiperInfinite, SwiperBasic } from "./Swiper";
+export {
+  SwiperCoverflow,
+  SwiperInfinite,
+  SwiperInfiniteProduct,
+  SwiperBasic,
+} from "./Swiper";

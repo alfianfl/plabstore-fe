@@ -56,6 +56,14 @@ export function SwiperCoverflow(props) {
     </>
   );
 }
+export function SwiperInfiniteProduct(props) {
+  const { children, ...rest } = props;
+  return (
+    <Swiper {...rest} slidesPerView={3} className="mySwiper">
+      {children}
+    </Swiper>
+  );
+}
 export function SwiperInfinite(props) {
   const { children, ...rest } = props;
   return (

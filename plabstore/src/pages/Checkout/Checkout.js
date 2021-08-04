@@ -7,6 +7,11 @@ import { Button } from "../../components/buttons";
 
 import UseQtyHandler from "../../hooks/UseQtyHandler";
 
+import ReactMidtrans from "react-midtrans/src";
+
+import { FloatingWhatsApp } from "react-floating-whatsapp-button";
+import "react-floating-whatsapp-button/dist/index.css";
+
 import { BsFillTrashFill } from "@react-icons/all-files/bs/BsFillTrashFill";
 
 function Checkout() {
@@ -18,13 +23,57 @@ function Checkout() {
 
   return (
     <div className="checkout px-lg-4 px-2 px-md-2 my-5">
-      <h1 className="text-center">Shopping Bag</h1>
+      <h1 className="text-center mb-5">Shopping Bag</h1>
+      <div className="mt-lg-0 mt-5 d-flex ">
+        <div class="content mr-2">
+          <button class="button button--anthe">
+            <a
+              href="/"
+              style={{
+                textDecoration: "none",
+                color: "white",
+              }}
+            >
+              {" "}
+              <span>Home</span>
+            </a>
+          </button>
+        </div>
+        <div class="content mr-2">
+          <button class="button button--anthe">
+            <a
+              href="/wishlist"
+              style={{
+                textDecoration: "none",
+                color: "white",
+              }}
+            >
+              {" "}
+              <span>Wishlist</span>
+            </a>
+          </button>
+        </div>
+        <div class="content">
+          <button class="button button--anthe">
+            <a
+              href="/produk"
+              style={{
+                textDecoration: "none",
+                color: "white",
+              }}
+            >
+              {" "}
+              <span>Other Product</span>
+            </a>
+          </button>
+        </div>
+      </div>
       <GridContainer>
         <GridItem lg={8} xs={12}>
           {value.map((item, index) => (
             <div
               key={index}
-              className="checkout-thumbnail py-3 px-lg-3 px-0 mt-lg-5 mt-3 "
+              className="checkout-thumbnail py-3 px-lg-3 px-0 mt-lg-4 mt-3 "
             >
               <GridContainer>
                 <JustifyCenter>
@@ -91,7 +140,7 @@ function Checkout() {
           ))}
         </GridItem>
         <GridItem lg={4} xs={12}>
-          <div className="voucher-form mt-5">
+          <div className="voucher-form mt-4">
             <h4>Anda punya voucher diskon?</h4>
             <TextField
               placeholder={"Masukkan voucher diskon..."}
@@ -114,14 +163,22 @@ function Checkout() {
               <strong>Total Harga</strong>
               <h2>Rp 142.000</h2>
             </div>
-            <div className="btn-bayar">
-              <Button size="medium" variant="contained" background="#94D0CC">
-                <span style={{ color: "white" }}>Bayar</span>
-              </Button>
-            </div>
+            <ReactMidtrans clienttKey={"your-key"} token={"payment-token"}>
+              <div className="btn-bayar">
+                <Button size="medium" variant="contained" background="#94D0CC">
+                  Bayar
+                </Button>
+              </div>
+            </ReactMidtrans>
           </div>
         </GridItem>
       </GridContainer>
+      <FloatingWhatsApp
+        position="right"
+        zIndex={999}
+        size="55px"
+        phone="089524013023"
+      />
     </div>
   );
 }

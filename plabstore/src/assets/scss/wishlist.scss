@@ -1,4 +1,112 @@
+#cbx {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.button--anthe {
+  font-family: bely-display, sans-serif;
+  color: #fff;
+  background-color: white;
+  z-index: 99999;
+}
+
+.button--anthe::before {
+  content: "";
+  background-color: #5624d0;
+
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+  transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1),
+    -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+  border-radius: 5px;
+}
+
+.button--anthe:hover::before {
+  background-color: #5624d0;
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.button--anthe span {
+  display: block;
+  mix-blend-mode: hard-light;
+
+  color: #fff;
+  transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+}
+.content__item {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  counter-increment: itemcounter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.content__item::before {
+  color: var(--color-number);
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: counters(itemcounter, ".", decimal-leading-zero);
+}
+
+.button {
+  pointer-events: auto;
+  cursor: pointer;
+  background: #fff;
+  z-index: 99999;
+  border: none;
+  padding: 0.3rem 1.5rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+}
+
+.button::before,
+.button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button--anthe:hover span {
+  transform: translate3d(-10px, 0, 0);
+}
+.button-beli {
+  button {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+}
 .wishlist {
+  .checkout-all {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    align-items: center;
+    right: 0;
+
+    z-index: 999999;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+  }
   font-family: Vollkorn;
   font-style: normal;
   font-weight: normal;
@@ -49,94 +157,6 @@
       &:hover {
         color: #b10541;
         cursor: pointer;
-      }
-    }
-    .button--anthe {
-      font-family: bely-display, sans-serif;
-      color: #fff;
-      background-color: white;
-      z-index: 99999;
-    }
-
-    .button--anthe::before {
-      content: "";
-      background-color: #5624d0;
-
-      -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-      clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-      transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1),
-        -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
-      border-radius: 5px;
-    }
-
-    .button--anthe:hover::before {
-      background-color: #5624d0;
-      -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    }
-
-    .button--anthe span {
-      display: block;
-      mix-blend-mode: hard-light;
-
-      color: #fff;
-      transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
-    }
-    .content__item {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      counter-increment: itemcounter;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .content__item::before {
-      color: var(--color-number);
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: counters(itemcounter, ".", decimal-leading-zero);
-    }
-
-    .button {
-      pointer-events: auto;
-      cursor: pointer;
-      background: #fff;
-      z-index: 99999;
-      border: none;
-      padding: 0.3rem 1.5rem;
-      margin: 0;
-      font-family: inherit;
-      font-size: inherit;
-      position: relative;
-      display: inline-block;
-    }
-
-    .button::before,
-    .button::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .button--anthe:hover span {
-      transform: translate3d(-10px, 0, 0);
-    }
-    .button-beli {
-      button {
-        color: white;
-        &:hover {
-          color: white;
-        }
       }
     }
   }

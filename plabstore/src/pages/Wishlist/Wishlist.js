@@ -17,11 +17,15 @@ function Wishlist() {
       <GridContainer>
         <GridItem lg={12} sm={12}>
           <h1 className="text-center">Wishlist</h1>
+
           {products.map((item, index) => (
             <div
               key={index}
-              className="wishlist-thumbnail py-3 px-lg-3 px-0 mt-lg-5 mt-3"
+              className="wishlist-thumbnail py-3 px-lg-3 px-0 mt-lg-4 mt-3"
             >
+              <div class="cntr">
+                <input class="hidden-xs-up" id="cbx" type="checkbox" />
+              </div>
               <GridContainer>
                 <JustifyCenter>
                   <GridItem lg={4} xs={10} sm={12}>
@@ -82,23 +86,6 @@ function Wishlist() {
                         >
                           <BsFillTrashFill />
                         </span>
-
-                        <div className="mt-lg-0 mt-3 ">
-                          <li class="content__item">
-                            <button class="button button--anthe">
-                              <a
-                                href="/checkout"
-                                style={{
-                                  textDecoration: "none",
-                                  color: "white",
-                                }}
-                              >
-                                {" "}
-                                <span>Checkout</span>
-                              </a>
-                            </button>
-                          </li>
-                        </div>
                       </div>
                     </JustifyBetween>
                   </GridItem>
@@ -108,6 +95,24 @@ function Wishlist() {
           ))}
         </GridItem>
       </GridContainer>
+      <div className="checkout-all">
+        <div className="mr-3">
+          <li class="content__item">
+            <button class="button button--anthe py-lg-2 py-2 px-lg-4 px-3">
+              <a
+                href="/checkout"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                {" "}
+                <span>Checkout</span>
+              </a>
+            </button>
+          </li>
+        </div>
+      </div>
     </div>
   );
 }
