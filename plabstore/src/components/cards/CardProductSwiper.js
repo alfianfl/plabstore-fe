@@ -27,7 +27,7 @@ function CardProduct() {
       {products.map((product) => (
         <SwiperSlide key={product.id}>
           <div className="mx-lg-0 mx-3">
-            <div className="card-product mx-2 " style={{ width: "18rem" }}>
+            <div className="card-product mx-2 bg-light" style={{ width: "18rem" }}>
               <div
                 className="thumb-img-product"
                 style={{

@@ -11,6 +11,7 @@ import {
   Transaksi,
   User,
   RiwayatPembelian,
+  AddProduct
 } from "../pages";
 
 export const routes = [
@@ -116,5 +117,12 @@ export const routeAdmin = [
       return "/dashboard/user";
     },
     component: User,
+  },
+  {
+    name: "AddProduct",
+    path: () => {
+      return "/dashboard/produk/add";
+    },
+    component: AddProduct,
   },
 ]

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import { ProdukTable } from '../../components/table/ProdukTable'
+import { Link } from 'react-router-dom'
 import MenuIcon from '../../components/sidebar/MenuIcon'
 import Table from '../../components/table/Table'
 import MOCK_DATA_PRODUK from '../../dummy_data/MOCK_DATA_PRODUK.json'
@@ -34,7 +34,9 @@ function ProductAdmin() {
         <>
             <MenuIcon />
             <Table name="Produk" columns={PRODUK} data={MOCK_DATA_PRODUK} >
-                <button className="btn-pagination my-3">Tambah produk</button>
+                <Link to="/dashboard/produk/add">
+                    <button className="btn-pagination my-3">Tambah produk</button>
+                </Link>
             </Table>
             {/* <ProdukTable /> */}
         </>

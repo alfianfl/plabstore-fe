@@ -10,3 +10,4 @@ export { default as User } from './User'
 export { default as Wishlist } from "./Wishlist";
 export { default as Checkout } from "./Checkout";
 export { default as RiwayatPembelian } from "./RiwayatPembelian";
+export { default as AddProduct } from "./AddProduct";

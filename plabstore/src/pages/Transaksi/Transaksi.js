@@ -33,9 +33,14 @@ function Transaksi() {
         {
             Header:'Aksi',
             Cell:(props)=>{
+                // console.log(props.row.values.status)
                 return (
                     <div className="d-flex justify-content-center">
-                        <button className="btn-kirim" onClick={() => selectRow(props.row.values)}>Kirim Barang</button>
+                        {props.row.values.status === "Sedang dikirim" || props.row.values.status === "Diterima" ? (
+                            <button className="btn-kirim" onClick={() => selectRow(props.row.values)} disabled>Dikirim</button>
+                        ) : (
+                            <button className="btn-kirim" onClick={() => selectRow(props.row.values)}>Kirim Barang</button>
+                        )}
                     </div>
                 )
             }

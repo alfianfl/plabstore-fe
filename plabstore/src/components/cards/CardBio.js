@@ -29,9 +29,19 @@ function CardBio() {
                             <div>Email</div>
                             <input className="text-bio" type="email" value="user.a@gmail.com" onChange={handleChange} />
                             <div>Jenis Kelamin</div>
-                            <div className="d-flex justify-content-start align-middle">
+                            {/* <div className="d-flex justify-content-start align-middle">
                                 <input className="mr-1" type="radio" name="pria" id="pria" /><label htmlFor="pria">Pria</label>
                                 <input className="mr-1" type="radio" name="wanita" id="wanita" /><label htmlFor="wanita">Wanita</label>
+                            </div> */}
+                            <div className="d-flex justify-content-start">
+                                <label className="option-items inline-flex items-center">
+                                    <input type="radio" value="pria"  />
+                                    <span className="ml-2">Pria</span>
+                                </label>
+                                <label className="option-items inline-flex items-center">
+                                    <input type="radio" value="wanita"  />
+                                    <span className="ml-2">Wanita</span>
+                                </label>
                             </div>
                             <div>Nomor HP</div>
                             <input className="text-bio" type="number" value="0887567383" onChange={handleChange} />

@@ -19,6 +19,9 @@ function Sidebar() {
                 <li className="nav-item mb-2">
                     <Link className="nav-link" to="/dashboard/user">User</Link>
                 </li>
+                <li className="nav-item mb-2">
+                    <Link className="nav-link" to="/">Logout</Link>
+                </li>
             </ul>
         </nav>
     )

@@ -72,9 +72,15 @@ table {
     background-color: #554fc5;
     color: #fff;
     border: none;
-    padding: 0.35rem;
-    border-radius: 20px;
+    padding: 0.4rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 10px;
     font-size: small;
+
+    &:disabled {
+        background-color: #8784bd;
+    }  
 }
 
 // .btn-hapus {
