@@ -1,5 +1,5 @@
 .profile {
-    background-color: white;
+    // background-color: #DBE6FD;
     min-height: 100vh;
     height: 100%;
     padding-top: 2rem;
@@ -11,6 +11,8 @@
     .profile-pict {
         border-radius: 100%;
         margin: 1rem;
+        // background-repeat: no-repeat;
+        // background-size: contain;
         img {
             width: 4rem;
             height: 4rem;

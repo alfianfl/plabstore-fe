@@ -11,7 +11,7 @@ function Profile() {
         <div className="d-flex flex-column align-items-center profile-container">
           <div className="profile-pict">
             <img
-              src="https://image000.flaticon.com/png/512/2948/2948035.png"
+              src="https://image.flaticon.com/icons/png/512/848/848043.png"
               alt="profile"
             />
           </div>
@@ -19,11 +19,11 @@ function Profile() {
             <h4>User A</h4>
           </div>
           <div className="edit-profil">
-            <Link to="EditProfile">Edit Profil</Link>
+            <Link to="/EditProfile">Edit Profil</Link>
           </div>
         </div>
       </JustifyCenter>
-
+      
       <CardProductSwiper />
     </div>
   );

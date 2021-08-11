@@ -1,0 +1,48 @@
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background-color: #e4e4e4;
+  /* padding: 5%; */
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+#sidebar .sidebar-bar {
+  margin-top: 5rem;
+  list-style-type: none;
+}
+
+#sidebar .nav-link {
+  color: #554fc5;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 17px;
+}
+
+#sidebar .nav-link:hover {
+  color: #1e1b66;
+}
+
+#sidebar .toggle-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.sidebar-desktop {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.toggle-sidebar {
+  display: none;
+}

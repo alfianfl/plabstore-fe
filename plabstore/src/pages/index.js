@@ -4,6 +4,13 @@ export { default as EditProfile } from "./EditProfile";
 export { default as DetailProduct } from "./DetailProduct";
 export { default as Produk } from "./Product";
 export { default as StatusPembelian } from "./StatusPembelian";
+export { default as ProdukAdmin } from './ProductAdmin'
+export { default as Transaksi } from './Transaksi'
+export { default as User } from './User'
 export { default as Wishlist } from "./Wishlist";
 export { default as Checkout } from "./Checkout";
 export { default as RiwayatPembelian } from "./RiwayatPembelian";
+export { default as AddProduct } from "./AddProduct";
+export { default as EditProduct } from "./EditProduct";
+export { default as Diskon } from "./Diskon";
+export { default as EditDiskon } from "./EditDiskon";

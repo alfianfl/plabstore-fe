@@ -50,7 +50,9 @@ function DropdownNavbar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <Link style={{ textDecoration: "none", color: "black" }} to="/profile">
+        <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      </Link>
       <Link
         style={{ textDecoration: "none", color: "black" }}
         to="/riwayat-pembelian"
@@ -109,7 +111,9 @@ function DropdownNavbar() {
       open={isMobileMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <Link style={{ textDecoration: "none", color: "black" }} to={"/profile"}>
+        <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      </Link>
       <Link style={{ textDecoration: "none", color: "black" }} to={"/checkout"}>
         <MenuItem onClick={handleMenuClose}>Keranjang Belanja</MenuItem>
       </Link>

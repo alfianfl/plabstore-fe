@@ -1,4 +1,6 @@
 import { Router } from "./configs";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 import "./App.css";
 import "./assets/css/preloader.css";
@@ -9,7 +11,9 @@ function App() {
       <div className="loader ">
         <div id="preloader" />
       </div>
-      <Router />
+      <Provider store={store}>
+        <Router />
+      </Provider>
     </div>
   );
 }

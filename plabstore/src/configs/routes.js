@@ -7,8 +7,16 @@ import {
   Wishlist,
   Checkout,
   StatusPembelian,
+  ProdukAdmin,
+  Transaksi,
+  User,
   RiwayatPembelian,
+  AddProduct,
+  EditProduct,
+  Diskon,
+  EditDiskon
 } from "../pages";
+
 export const routes = [
   {
     name: "Home",
@@ -83,3 +91,62 @@ export const routes = [
     component: DetailProduct,
   },
 ];
+
+export const routeAdmin = [
+  {
+    name: "DefaultDashboard",
+    path: () => {
+      return "/dashboard";
+    },
+    component: ProdukAdmin,
+  },
+  {
+    name: "ProdukAdmin",
+    path: () => {
+      return "/dashboard/produk";
+    },
+    component: ProdukAdmin,
+  },
+  {
+    name: "Transaksi",
+    path: () => {
+      return "/dashboard/transaksi";
+    },
+    component: Transaksi,
+  },
+  {
+    name: "User",
+    path: () => {
+      return "/dashboard/user";
+    },
+    component: User,
+  },
+  {
+    name: "AddProduct",
+    path: () => {
+      return "/dashboard/produk/add";
+    },
+    component: AddProduct,
+  },
+  {
+    name: "EditProduct",
+    path: () => {
+      return "/dashboard/produk/edit/:id";
+    },
+    component: EditProduct,
+  },
+  {
+    name: "Diskon",
+    path: () => {
+      return "/dashboard/diskon";
+    },
+    component: Diskon,
+  },
+  {
+    name: "EditDiskon",
+    path: () => {
+      return "/dashboard/diskon/edit/:id";
+    },
+    component: EditDiskon,
+  },
+]

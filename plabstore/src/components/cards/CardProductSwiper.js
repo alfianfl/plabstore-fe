@@ -27,7 +27,10 @@ function CardProduct() {
       {products.map((product) => (
         <SwiperSlide key={product.id}>
           <div className="mx-lg-0 mx-3">
-            <div className="card-product mx-2 " style={{ width: "18rem" }}>
+            <div
+              className="card-product mx-2 bg-light"
+              style={{ width: "18rem" }}
+            >
               <div
                 className="thumb-img-product"
                 style={{
@@ -70,7 +73,7 @@ function CardProduct() {
                 </form>
               </div>
 
-              <div className="card-body ">
+              <div className="card-body " style={{ backgroundColor: "white" }}>
                 <h5 className="card-title font-weight-bold">
                   Baju Kemeja Polo
                 </h5>

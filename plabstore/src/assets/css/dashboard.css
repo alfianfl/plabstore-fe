@@ -1,0 +1,38 @@
+#content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+#content .cart-body {
+  background-color: white;
+}
+
+.btn-edit {
+  background-color: #184d47;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  /* width: 48%; */
+}
+
+.btn-hapus {
+  background-color: white;
+  color: #554fc5;
+  border: 1px solid #554fc5;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: small;
+  /* width: 48%; */
+}
+
+.tables {
+  padding: 2rem;
+  width: 100%;
+}

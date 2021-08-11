@@ -1,0 +1,39 @@
+.add-product {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    // background-color: red;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    width: 100%;
+    flex-direction: column;
+
+    input, select {
+        width: 100%;
+        border-radius: 30px;
+        outline: none;
+        border: 1px solid black;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    select {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .container-foto {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 1rem;
+        width: 50%;
+    }
+
+    .upload-foto {
+        visibility: hidden;
+    }
+
+    .img-upload {
+        border-radius: 20px;
+    }
+}

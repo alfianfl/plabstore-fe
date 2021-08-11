@@ -1,0 +1,115 @@
+.navbar-desktop {
+  background-color: #184d47;
+  width: 100%;
+}
+
+.navbar-brand img {
+  position: relative;
+  bottom: 8px;
+}
+
+.udlite-btn .btn-login {
+  min-width: 3rem;
+  background-color: #fff;
+  color: #184d47;
+  font-size: 15px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+}
+
+.dropdown-menu.show {
+  display: inline;
+  position: relative;
+  left: -110px;
+  width: 100px;
+}
+
+.btn-daftar {
+  min-width: 3rem;
+  color: #fff;
+  font-size: 15px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  border: 1px solid #fff;
+}
+
+.nav-link {
+  color: #fff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.btn-login:hover {
+  background-color: #fff;
+  font-size: 15px;
+  border: 1px solid #0f7c90;
+  color: #0f7c90;
+}
+
+.btn-daftar:hover {
+  background-color: #fff;
+  font-size: 15px;
+  border: 1px solid #0f7c90;
+  color: #0f7c90;
+}
+
+/* .nav-grid {
+    display: grid;
+    place-items: center;
+  } */
+ul li {
+  font-family: sf pro text, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+}
+
+.nav-link:hover {
+  color: #ba8a5c;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 100;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.navbar-nav {
+  width: 100%;
+}
+
+.form-inline .input-group {
+  width: 500px;
+}
+
+/* navMobile */
+@media only screen and (max-width: 1225px) {
+  .navbar-nav li:nth-child(4) {
+    display: none;
+  }
+  .form-inline .input-group {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 972px) {
+  .navbar-desktop {
+    display: none;
+  }
+  .input-search {
+    display: none;
+  }
+}
