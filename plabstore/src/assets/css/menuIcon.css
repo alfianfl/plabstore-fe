@@ -4,8 +4,7 @@
   background-color: #fff;
   border-radius: 10px;
   padding: 0.5rem;
-  -webkit-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
 }
 
 .bar1,
@@ -15,12 +14,10 @@
   height: 3px;
   background-color: #554fc5;
   margin: 6px 0;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
   transform: rotate(-45deg) translate(-6px, 6px);
 }
 
@@ -29,12 +26,10 @@
 }
 
 .bar3 {
-  -webkit-transform: rotate(45deg) translate(-6px, -8px);
   transform: rotate(45deg) translate(-6px, -8px);
 }
 
 .change .bar1 {
-  -webkit-transform: rotate(0deg) translate(0px, 0px);
   transform: rotate(0deg) translate(0px, 0px);
 }
 
@@ -43,6 +38,5 @@
 }
 
 .change .bar3 {
-  -webkit-transform: rotate(0deg) translate(0px, 0px);
   transform: rotate(0deg) translate(0px, 0px);
 }

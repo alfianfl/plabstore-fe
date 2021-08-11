@@ -23,8 +23,8 @@ function Profile() {
           </div>
         </div>
       </JustifyCenter>
-      
-      <CardProductSwiper />
+
+      <CardProductSwiper gender="pria" />
     </div>
   );
 }

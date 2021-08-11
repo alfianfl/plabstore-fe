@@ -3,6 +3,18 @@ import rootReducer from "../reducers";
 import { applyMiddleware } from "redux";
 import logger from "redux-logger";
 import thunk from "redux-thunk";
-const store = createStore(rootReducer, applyMiddleware(logger, thunk));
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+const persistConfig = {
+  key: "cart",
+  storage,
+  whitelist: ["cartProduct"],
+};
 
-export default store;
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+export let store = createStore(
+  persistedReducer,
+  applyMiddleware(logger, thunk)
+);
+export let persistor = persistStore(store);

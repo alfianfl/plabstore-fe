@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../../assets/css/detailProductPage.css";
 
 import img1 from "../../assets/img/images.jpg";
 import img2 from "../../assets/img/images2.jpg";
-
-import { CardProductSwiper } from "../../components/cards";
 import { GridContainer, GridItem } from "../../components/grid";
 
+import { useSelector, useDispatch } from "react-redux";
+import { fetchDetailProducts } from "../../redux";
+import { AddCartProduct } from "../../redux";
+
+import { useParams } from "react-router-dom";
 function DetailProduct() {
-  const [sizes] = React.useState([
+  const [qty, setQty] = useState(0);
+  const { id } = useParams();
+  const productData = useSelector((state) => state.detailProduct);
+  const dispatch = useDispatch();
+  const [sizes] = useState([
     { size: "S" },
     { size: "M" },
     { size: "L" },
     { size: "XL" },
     { size: "XXL" },
   ]);
-  const [products] = React.useState([
+  const [products] = useState([
     { img: img1 },
     { img: img2 },
     {
@@ -24,6 +31,21 @@ function DetailProduct() {
     },
   ]);
 
+  const increaseQty = () => {
+    if (qty + 1 > productData.product.qty) {
+      alert("batas pembelian sudah maksimum");
+    } else {
+      setQty((prevState) => prevState + 1);
+    }
+  };
+  const decreaseQty = () => {
+    if (qty > 0) {
+      setQty((prevState) => prevState - 1);
+    }
+  };
+  React.useEffect(() => {
+    dispatch(fetchDetailProducts(id));
+  }, [dispatch, id]);
   const changeImage = (id) => {
     document.querySelector("#featured").src = id;
   };
@@ -127,7 +149,7 @@ function DetailProduct() {
                   <div id="lens"></div>
                   <img
                     id="featured"
-                    src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4d7wDgfF3ujiJt6cyboHWau_IZDU2tAfpeoT32zEuohL8QZ19RFw5g1xbmJbO9g5dZNNu7HVO&usqp=CAc`}
+                    src={productData.product.gambar}
                     alt="produk"
                     height="330px"
                     width="100%"
@@ -153,13 +175,12 @@ function DetailProduct() {
                 style={{ zIndex: "999999" }}
               >
                 <div className="px-1">
-                  <h4>Kemeja Polo Lev`is</h4>
-                  <div>Kemeja polos kualitas terbaik</div>
-                  <p>
-                    <strong>Stok : 20 </strong>
+                  <h4>{productData.product.nama}</h4>
+                  <p className="mt-2">
+                    <strong>Stok : {productData.product.qty - qty} </strong>
                   </p>
                   <p>
-                    <strong>Rp 200.000 </strong>
+                    <strong>Rp {productData.product.harga} </strong>
                   </p>
                 </div>
                 <div className="list-size-detail">
@@ -180,12 +201,29 @@ function DetailProduct() {
                 <div className="thumb-checkout" style={{ height: "70%" }}>
                   <div className="my-2">
                     <h4>Kuantitas</h4>
-                    <button className="btn-kuantitas">-</button>
-                    <input type="number" className="kuantitas" disabled />
-                    <button className="btn-kuantitas">+</button>
+                    <button className="btn-kuantitas" onClick={decreaseQty}>
+                      -
+                    </button>
+                    <input value={qty} className="kuantitas" disabled />
+                    <button className="btn-kuantitas" onClick={increaseQty}>
+                      +
+                    </button>
                   </div>
                   <div className="d-flex my-4 w-100 justify-content-between">
-                    <button className="btn-beli mr-1 mb-3">
+                    <button
+                      onClick={() =>
+                        dispatch(
+                          AddCartProduct({
+                            nama: productData.product.nama,
+                            harga: productData.product.harga,
+                            gambar: productData.product.gambar,
+                            qty: qty,
+                            id: productData.product.id,
+                          })
+                        )
+                      }
+                      className="btn-beli mr-1 mb-3"
+                    >
                       <a
                         href="/checkout"
                         className="w-100"
@@ -195,7 +233,7 @@ function DetailProduct() {
                           display: "block",
                         }}
                       >
-                        Tambah ke keranjang
+                        Tambah ke Keranjang
                       </a>
                     </button>
                     <button className="btn-wishlist mx-1 mb-3">
@@ -208,17 +246,13 @@ function DetailProduct() {
                           display: "block",
                         }}
                       >
-                        Tambah ke wishlist
+                        Tambah ke Wishlist
                       </a>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-          </GridItem>
-          <GridItem xs={12} lg={12}>
-            <h3 className="text-center my-5 mx-3">Anda mungkin menyukai ini</h3>
-            <CardProductSwiper />
           </GridItem>
         </GridContainer>
       </section>

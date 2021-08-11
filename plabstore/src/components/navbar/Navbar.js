@@ -72,7 +72,7 @@ export default function Navbar() {
                   aria-label="open drawer"
                 >
                   <Link
-                    to="/produk"
+                    to="/listProduk"
                     style={{ textDecoration: "none", color: "black" }}
                   >
                     <IconButton color="inherit">

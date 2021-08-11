@@ -54,12 +54,12 @@ function Home() {
 
             <p className=" mr-lg-3 mr-1 mt-auto">
               {" "}
-              <a style={{ color: "black" }} href={"/produk"}>
+              <a style={{ color: "black" }} href={"/listProduk/pria"}>
                 Lihat Semua{" "}
               </a>
             </p>
           </JustifyBetween>
-          <CardProductSwiper />
+          <CardProductSwiper gender="pria" />
         </GridItem>
         <GridItem xs={12} sm={12}>
           <Banner />
@@ -79,12 +79,12 @@ function Home() {
 
             <p className=" mr-lg-3 mr-1 mt-auto">
               {" "}
-              <a style={{ color: "black" }} href={"/produk"}>
+              <a style={{ color: "black" }} href={"/listProduk/wanita"}>
                 Lihat Semua{" "}
               </a>
             </p>
           </JustifyBetween>
-          <CardProductSwiper />
+          <CardProductSwiper gender="wanita" />
         </GridItem>
       </GridContainer>
       <FloatingWhatsApp

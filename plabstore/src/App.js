@@ -1,6 +1,8 @@
 import { Router } from "./configs";
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import { store, persistor } from "./redux/store";
+
+import { PersistGate } from "redux-persist/integration/react";
 
 import "./App.css";
 import "./assets/css/preloader.css";
@@ -12,7 +14,9 @@ function App() {
         <div id="preloader" />
       </div>
       <Provider store={store}>
-        <Router />
+        <PersistGate loading={null} persistor={persistor}>
+          <Router />
+        </PersistGate>
       </Provider>
     </div>
   );

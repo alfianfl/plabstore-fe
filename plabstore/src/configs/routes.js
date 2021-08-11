@@ -14,7 +14,7 @@ import {
   AddProduct,
   EditProduct,
   Diskon,
-  EditDiskon
+  EditDiskon,
 } from "../pages";
 
 export const routes = [
@@ -77,7 +77,15 @@ export const routes = [
   {
     name: "Produk",
     path: () => {
-      return "/Produk";
+      return "/listProduk";
+    },
+    exact: true,
+    component: Produk,
+  },
+  {
+    name: "Produk",
+    path: () => {
+      return "/listProduk/:kategori";
     },
     exact: true,
     component: Produk,
@@ -85,7 +93,15 @@ export const routes = [
   {
     name: "DetailProduk",
     path: () => {
-      return "/Produk/:id";
+      return "/listProduk/detailProduk/:id";
+    },
+    exact: true,
+    component: DetailProduct,
+  },
+  {
+    name: "DetailProduk",
+    path: () => {
+      return "/detailProduk/:id";
     },
     exact: true,
     component: DetailProduct,
@@ -149,4 +165,4 @@ export const routeAdmin = [
     },
     component: EditDiskon,
   },
-]
+];

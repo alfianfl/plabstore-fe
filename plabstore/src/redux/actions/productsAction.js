@@ -3,7 +3,7 @@ export const fetchProducts = () => {
   return (dispatch) => {
     dispatch(fetchProductsRequest());
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      .get(`http://localhost:3004/products`)
       .then((response) => {
         const Products = response.data;
         dispatch(fetchProductsSuccess(Products));

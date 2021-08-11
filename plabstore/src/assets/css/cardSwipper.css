@@ -7,10 +7,7 @@
   max-width: 35ch;
   border-radius: 0.5em;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 500ms ease;
-  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
-  transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
 .cards .cards-body {
@@ -20,19 +17,13 @@
 .cards .cards-content {
   padding: 1em;
   padding-bottom: 1.5em;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 0)), to(#1f1a1a));
   background: linear-gradient(to right, rgba(255, 0, 0, 0), #1f1a1a);
-  -webkit-transform: translateY(65%);
-          transform: translateY(65%);
-  -webkit-transition: -webkit-transform 500ms ease;
-  transition: -webkit-transform 500ms ease;
+  transform: translateY(65%);
   transition: transform 500ms ease;
-  transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
 .cards .cards-content > *:not(.cards-title) {
   opacity: 0;
-  -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
 }
 
@@ -44,8 +35,6 @@
 
 .cards .cards-title {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
@@ -56,14 +45,9 @@
   width: calc(100% + 1em);
   position: absolute;
   height: 4px;
-  -webkit-transition: -webkit-transform 500ms ease;
-  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
-  transition: transform 500ms ease, -webkit-transform 500ms ease;
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  transform-origin: left;
+  transform: scaleX(0);
   background-color: #94d0cc;
 }
 
@@ -83,26 +67,21 @@
 }
 
 .cards:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .cards:hover .cards-title::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .cards:hover .cards-content {
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  transition-delay: 500ms;
+  transform: translateY(0%);
 }
 
 .cards .cards-content > *:not(.cards-title) {
   opacity: 1;
-  -webkit-transition-delay: 1000ms;
-          transition-delay: 1000ms;
+  transition-delay: 1000ms;
 }
 
 .swiper-2 {
