@@ -2,7 +2,9 @@ import React from "react";
 import "../../assets/css/editProfile.css";
 import { ModalAddress } from '../modal'
 
-function CardAddress() {
+function CardAddress(props) {
+  const { dataAlamat } = props
+
   return (
     <div className="detail-profile-container ">
       <div className="">Ubah Daftar Alamat</div>
@@ -11,26 +13,28 @@ function CardAddress() {
           <button className="btn-white w-50">Tambah Alamat Baru</button>
         </ModalAddress>
       </div>
-      <div className="address-container mt-2">
-        <div className="d-flex justify-content-between">
-          <div>Rumah</div>
-          <ModalAddress>
-            <div className="ubah-alamat">Ubah Alamat</div>
-          </ModalAddress>
-          {/* <Link to="">Ubah Alamat</Link> */}
-        </div>
-        <div>User A</div>
-        <div>085847xxxx</div>
-        <div className="d-flex justify-content-between">
-          <div>Jl. Sekian Kali 2 no. 19 Rt 09 Rw 10 blok J/09</div>
-          <div className="d-flex justify-content-end">
-            <label className="option-items">
-              <span className="mr-2">Dipilih</span>
-              <input type="radio" value="dipilih" />
-            </label>
+      {dataAlamat.map((alamat, index) => (
+        <div key={index} className="address-container mt-2">
+          <div className="d-flex justify-content-between">
+            <div>{alamat.label}</div>
+            <ModalAddress>
+              <div className="ubah-alamat">Ubah Alamat</div>
+            </ModalAddress>
+          </div>
+          <div>{alamat.penerima}</div>
+          <div>{alamat.nomor}</div>
+          <div className="d-flex justify-content-between">
+            <div>{alamat.alamat}</div>
+            <div className="d-flex justify-content-end">
+              <label className="option-items">
+                <span className="mr-2">Dipilih</span>
+                <input type="radio" value="dipilih" />
+              </label>
+            </div>
           </div>
         </div>
-      </div>
+      ))}
+
     </div>
   );
 }

@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../assets/css/profile.css";
 import { JustifyCenter } from "../../components/flex";
 import { CardProductSwiper } from "../../components/cards";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchSingleUser } from "../../redux";
 
 function Profile() {
+  const id = 1
+
+  const userData = useSelector((state) => state.user)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchSingleUser(id));
+  }, [dispatch, id])
+
   return (
     <div className="profile">
       <JustifyCenter>
@@ -16,7 +27,7 @@ function Profile() {
             />
           </div>
           <div className="mb-2">
-            <h4>User A</h4>
+            <h4>{userData.user.nama}</h4>
           </div>
           <div className="edit-profil">
             <Link to="/EditProfile">Edit Profil</Link>

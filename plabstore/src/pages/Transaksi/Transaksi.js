@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import MenuIcon from '../../components/sidebar/MenuIcon'
 import Table from '../../components/table/Table'
-import MOCK_DATA_TRANSAKSI from '../../dummy_data/MOCK_DATA_TRANSAKSI.json'
+// import MOCK_DATA_TRANSAKSI from '../../dummy_data/MOCK_DATA_TRANSAKSI.json'
+import { useDispatch, useSelector } from "react-redux";
+import { fetchTransaksi } from '../../redux'
 
 function Transaksi() {
     const [selectedRow, setSelectedRow] = useState({})
+    const transaksiData = useSelector((state) => state.transaksi)
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchTransaksi());
+    }, [dispatch])
 
     function selectRow(row) {
         setSelectedRow(row)
@@ -50,7 +58,7 @@ function Transaksi() {
     return (
         <>
             <MenuIcon />
-            <Table name="Transaksi" columns={TRANSACTION} data={MOCK_DATA_TRANSAKSI}  />
+            <Table name="Transaksi" columns={TRANSACTION} data={transaksiData.transaksi}  />
         </>
     )
 }

@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../assets/css/editProfile.css";
 import CardBio from "../../components/cards/CardBio";
 import { CardAddress } from "../../components/cards";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchSingleUser } from "../../redux";
 
 function EditProfile() {
   const [isEditBio, setIsEditBio] = useState(true);
+  const id = 1
+
+    const userData = useSelector((state) => state.user)
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        console.log('panggil')
+        dispatch(fetchSingleUser(id));
+    }, [dispatch, id])
 
   return (
     <div className="edit-profile">
@@ -37,7 +48,7 @@ function EditProfile() {
           </div>
         </div>
         <div className="col-12 col-md-8">
-          {isEditBio ? <CardBio /> : <CardAddress />}
+          {isEditBio ? <CardBio userData={userData} /> : <CardAddress dataAlamat={userData.user.alamat} />}
         </div>
       </div>
     </div>
