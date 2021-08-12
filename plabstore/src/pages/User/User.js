@@ -23,7 +23,7 @@ function User() {
         { Header: 'Email', accessor: 'email' },
         { Header: 'Jenis Kelamin', accessor: 'jenis_kelamin' },
         { Header: 'Nomor HP', accessor: 'nomor_hp' },
-        { Header: 'Alamat', accessor: 'alamat' }
+        { Header: 'Alamat', accessor: 'alamat[0].alamat' }
     ]
 
     return (
