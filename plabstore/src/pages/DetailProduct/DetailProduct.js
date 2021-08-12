@@ -7,22 +7,24 @@ import img2 from "../../assets/img/images2.jpg";
 import { GridContainer, GridItem } from "../../components/grid";
 
 import { useSelector, useDispatch } from "react-redux";
-import { fetchDetailProducts } from "../../redux";
+import { AddWishlist, fetchDetailProducts } from "../../redux";
 import { AddCartProduct } from "../../redux";
 
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 function DetailProduct() {
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
   const { id } = useParams();
   const productData = useSelector((state) => state.detailProduct);
   const dispatch = useDispatch();
-  const [sizes] = useState([
-    { size: "S" },
-    { size: "M" },
-    { size: "L" },
-    { size: "XL" },
-    { size: "XXL" },
-  ]);
+  const [sizeCart, setSizeCart] = useState("");
+
+  const handleChangeSize = (e) => {
+    const { value } = e.target;
+    setSizeCart(value);
+  };
+  React.useEffect(() => {
+    console.log(sizeCart);
+  });
   const [products] = useState([
     { img: img1 },
     { img: img2 },
@@ -39,13 +41,14 @@ function DetailProduct() {
     }
   };
   const decreaseQty = () => {
-    if (qty > 0) {
+    if (qty > 1) {
       setQty((prevState) => prevState - 1);
     }
   };
   React.useEffect(() => {
     dispatch(fetchDetailProducts(id));
   }, [dispatch, id]);
+
   const changeImage = (id) => {
     document.querySelector("#featured").src = id;
   };
@@ -184,19 +187,61 @@ function DetailProduct() {
                   </p>
                 </div>
                 <div className="list-size-detail">
-                  {sizes.map((size, index) => (
-                    <div key={index}>
-                      <label className="container-radio">
-                        <input
-                          type="radio"
-                          defaultChecked="checked"
-                          name="radio"
-                          value={size.size}
-                        />
-                        <span className="checkmark">{size.size} </span>
-                      </label>
-                    </div>
-                  ))}
+                  <div>
+                    <label className="container-radio">
+                      <input
+                        type="radio"
+                        name="radio"
+                        value="S"
+                        onChange={(e) => handleChangeSize(e)}
+                      />
+                      <span className="checkmark">S</span>
+                    </label>
+                  </div>
+                  <div>
+                    <label className="container-radio">
+                      <input
+                        type="radio"
+                        name="radio"
+                        value="M"
+                        onChange={(e) => handleChangeSize(e)}
+                      />
+                      <span className="checkmark">M</span>
+                    </label>
+                  </div>
+                  <div>
+                    <label className="container-radio">
+                      <input
+                        type="radio"
+                        name="radio"
+                        value="S"
+                        onChange={(e) => handleChangeSize(e)}
+                      />
+                      <span className="checkmark">L</span>
+                    </label>
+                  </div>
+                  <div>
+                    <label className="container-radio">
+                      <input
+                        type="radio"
+                        name="radio"
+                        value="XL"
+                        onChange={(e) => handleChangeSize(e)}
+                      />
+                      <span className="checkmark">XL</span>
+                    </label>
+                  </div>
+                  <div>
+                    <label className="container-radio">
+                      <input
+                        type="radio"
+                        name="radio"
+                        value="XXL"
+                        onChange={(e) => handleChangeSize(e)}
+                      />
+                      <span className="checkmark">XXL</span>
+                    </label>
+                  </div>
                 </div>
                 <div className="thumb-checkout" style={{ height: "70%" }}>
                   <div className="my-2">
@@ -219,13 +264,14 @@ function DetailProduct() {
                             gambar: productData.product.gambar,
                             qty: qty,
                             id: productData.product.id,
+                            size: sizeCart,
                           })
                         )
                       }
                       className="btn-beli mr-1 mb-3"
                     >
-                      <a
-                        href="/checkout"
+                      <Link
+                        to="/checkout"
                         className="w-100"
                         style={{
                           textDecoration: "none",
@@ -234,11 +280,27 @@ function DetailProduct() {
                         }}
                       >
                         Tambah ke Keranjang
-                      </a>
+                      </Link>
                     </button>
-                    <button className="btn-wishlist mx-1 mb-3">
-                      <a
-                        href="/wishlist"
+                    <button
+                      className="btn-wishlist mx-1 mb-3"
+                      onClick={() =>
+                        dispatch(
+                          AddWishlist({
+                            nama: productData.product.nama,
+                            harga: productData.product.harga,
+                            gambar: productData.product.gambar,
+                            qty: qty,
+                            id: productData.product.id,
+                            size: sizeCart,
+                            gender: productData.product.category.nama,
+                            jenis: productData.product.category.jenis,
+                          })
+                        )
+                      }
+                    >
+                      <Link
+                        to="/wishlist"
                         className="w-100"
                         style={{
                           textDecoration: "none",
@@ -247,7 +309,7 @@ function DetailProduct() {
                         }}
                       >
                         Tambah ke Wishlist
-                      </a>
+                      </Link>
                     </button>
                   </div>
                 </div>

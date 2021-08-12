@@ -4,6 +4,10 @@
   cursor: pointer;
 }
 
+.total {
+  font-size: 20px;
+}
+
 .button--anthe {
   font-family: bely-display, sans-serif;
   color: #fff;
@@ -172,6 +176,9 @@
 }
 
 @media (max-width: 540px) {
+  .wishlist .total {
+    font-size: 12px;
+  }
   .wishlist .button--anthe span {
     font-size: 8px;
   }

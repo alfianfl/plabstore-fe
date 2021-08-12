@@ -12,6 +12,7 @@ import { fetchProducts } from "../../redux";
 import { useParams } from "react-router-dom";
 function CardProduct() {
   const productData = useSelector((state) => state.product);
+  const [cardLoad] = useState([{}, {}, {}, {}, {}, {}]);
   const dispatch = useDispatch();
   const { kategori } = useParams();
   const [sizes] = useState([
@@ -34,7 +35,17 @@ function CardProduct() {
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
-  return (
+  return productData.loading ? (
+    <div className="row">
+      {cardLoad.map((product) => (
+        <div className="col-lg-4 col-md-4 col-sm-6 col-12 d-flex justify-content-center mx-lg-0 mb-4 mt-0 mx-md-5 mx-0">
+          <div class="card-skeleton"></div>
+        </div>
+      ))}
+    </div>
+  ) : productData.error ? (
+    <h2>{productData.error}</h2>
+  ) : (
     <div className="product" id="product-list">
       <div className="container-fluid">
         <div className="d-lg-flex d-none justify-content-between align-items-center d-mobile">

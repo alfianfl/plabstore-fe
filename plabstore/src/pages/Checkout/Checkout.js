@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { GridContainer, GridItem } from "../../components/grid";
 import { JustifyBetween, JustifyCenter } from "../../components/flex";
 import "../../assets/css/checkout.css";
@@ -20,8 +20,6 @@ import { BsFillTrashFill } from "@react-icons/all-files/bs/BsFillTrashFill";
 function Checkout() {
   const cartData = useSelector((state) => state.cartProduct);
   const dispatch = useDispatch();
-
-  const [sizes] = useState([{ size: "S" }]);
   const itemPrice = cartData.reduce((a, c) => a + c.qty * c.harga, 0);
 
   return (
@@ -59,7 +57,7 @@ function Checkout() {
         <div class="content">
           <button class="button button--anthe">
             <a
-              href="/produk"
+              href="/listProduk"
               style={{
                 textDecoration: "none",
                 color: "white",
@@ -82,7 +80,7 @@ function Checkout() {
               >
                 <GridContainer>
                   <JustifyCenter>
-                    <GridItem lg={4} xs={12} sm={12}>
+                    <GridItem lg={4} xs={3} sm={12}>
                       <div className="thumb-image">
                         <img
                           src={item.gambar}
@@ -93,15 +91,13 @@ function Checkout() {
                         />
                       </div>
                     </GridItem>
-                    <GridItem lg={8} xs={12} sm={12}>
+                    <GridItem lg={8} xs={9} sm={12}>
                       <JustifyBetween>
                         <div className=" ml-3 ">
                           <h3>{item.nama}</h3>
 
                           <div className="rounded-size my-lg-4 my-3 ">
-                            {sizes.map((size, index) => (
-                              <div key={index}>{size.size}</div>
-                            ))}
+                            <div>{item.size}</div>
                           </div>
 
                           <strong className=" mt-lg-0 mt-4 d-block">
@@ -111,7 +107,7 @@ function Checkout() {
                         <div className="d-flex flex-column justify-content-between align-items-end">
                           <span
                             className="hapus-wishlist"
-                            onClick={() => dispatch(DeleteCartProduct(item.id))}
+                            onClick={() => dispatch(DeleteCartProduct(index))}
                           >
                             <BsFillTrashFill />
                           </span>
@@ -119,7 +115,7 @@ function Checkout() {
                             <div class="number">
                               <span
                                 class="minus"
-                                onClick={() => dispatch(RemoveProduct(item.id))}
+                                onClick={() => dispatch(RemoveProduct(index))}
                               >
                                 -
                               </span>
@@ -130,7 +126,7 @@ function Checkout() {
                               />
                               <span
                                 class="plus"
-                                onClick={() => dispatch(AddProduct(item.id))}
+                                onClick={() => dispatch(AddProduct(index))}
                               >
                                 +
                               </span>
