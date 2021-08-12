@@ -13,6 +13,7 @@
   background-color: #fff;
   color: #184d47;
   font-size: 15px;
+  -webkit-transition: 0.8s;
   transition: 0.8s;
 }
 
@@ -31,6 +32,7 @@
   min-width: 3rem;
   color: #fff;
   font-size: 15px;
+  -webkit-transition: 0.8s;
   transition: 0.8s;
   border: 1px solid #fff;
 }

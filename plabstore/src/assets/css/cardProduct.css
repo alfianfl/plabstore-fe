@@ -43,12 +43,21 @@
   width: 100%;
   height: 100%;
   border-radius: 6px;
-  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 10px 45px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 45px rgba(0, 0, 0, 0.1);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(211, 211, 211, 0)), color-stop(50%, rgba(211, 211, 211, 0.8)), to(rgba(211, 211, 211, 0))), var(--title-skeleton), var(--desc-line-skeleton), var(--desc-line-skeleton), var(--avatar-skeleton), var(--footer-skeleton), var(--card-skeleton);
   background-image: linear-gradient(90deg, rgba(211, 211, 211, 0) 0, rgba(211, 211, 211, 0.8) 50%, rgba(211, 211, 211, 0) 100%), var(--title-skeleton), var(--desc-line-skeleton), var(--desc-line-skeleton), var(--avatar-skeleton), var(--footer-skeleton), var(--card-skeleton);
   background-size: var(--blur-size), var(--title-width) var(--title-height), var(--desc-line-1-width) var(--desc-line-height), var(--desc-line-2-width) var(--desc-line-height), var(--avatar-size) var(--avatar-size), 100% var(--footer-height), 100% 100%;
   background-position: -150% 0, var(--title-position), var(--desc-line-1-position), var(--desc-line-2-position), var(--avatar-position), var(--footer-position), 0 0;
   background-repeat: no-repeat;
-  animation: loading 1.5s infinite;
+  -webkit-animation: loading 1.5s infinite;
+          animation: loading 1.5s infinite;
+}
+
+@-webkit-keyframes loading {
+  to {
+    background-position: 350% 0, var(--title-position), var(--desc-line-1-position), var(--desc-line-2-position), var(--avatar-position), var(--footer-position), 0 0;
+  }
 }
 
 @keyframes loading {
@@ -62,7 +71,8 @@
 }
 
 .card {
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .swiper-button-prev,
@@ -106,16 +116,27 @@
 .paginationBttns {
   width: 100%;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .paginationBttns a {
   padding: 15px;
   height: 40px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-decoration: none;
   color: black;
@@ -175,18 +196,23 @@ a:not([href]):not([class]):hover {
 
 .card-product .form-card {
   display: none;
+  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 
 .card-product .thumb-img-product {
   width: 100%;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
 .card-product:hover .container-radio,
 .card-product:hover .button-beli {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .card-product:hover .form-card {
@@ -196,24 +222,40 @@ a:not([href]):not([class]):hover {
   bottom: 0;
   background-color: rgba(43, 41, 41, 0.5);
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card-product:hover .thumb-img-product {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .card-product .container-radio {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
   display: block;
   position: relative;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -227,10 +269,16 @@ a:not([href]):not([class]):hover {
   width: 35px;
   height: 35px;
   font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: black;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   border-radius: 50%;
   background-color: #ccc;
@@ -258,26 +306,39 @@ a:not([href]):not([class]):hover {
 
 .card-product .list-size {
   margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 70%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card-product .list-size .rounded-size {
   width: 35px;
   height: 35px;
   font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: black;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   border-radius: 50%;
   background-color: #c4c4c4;
 }
 
 .card-product .button-beli {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
   display: block;
   font-weight: 600;
   width: 30%;
@@ -308,7 +369,9 @@ a:not([href]):not([class]):hover {
     width: 85%;
   }
   .card-product .thumb-card {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .card-product .slick-prev:before {
     font-size: 25px;

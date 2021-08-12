@@ -35,12 +35,24 @@ function EditDiskon() {
             <h3 className="mb-5">Edit Diskon</h3>
 
             <div className="d-flex">
-                <input name="diskon" className="table-search w-100 m-1" type="text" placeholder="Besar Diskon" {...register("diskon", { required: true })} />
-                <input name="kode" className="table-search w-100 m-1" type="text" placeholder="Kode" {...register("kode", { required: true })} />
+                <div className="w-100 m-1">
+                    <h6>Besar Diskon</h6>
+                    <input name="diskon" className="table-search" type="text" placeholder="Besar Diskon" {...register("diskon", { required: true })} />
+                </div>
+                <div className="w-100 m-1">
+                    <h6>Kode Diskon</h6>
+                    <input name="kode" className="table-search" type="text" placeholder="Kode" {...register("kode", { required: true })} />
+                </div>
             </div>
             <div className="d-flex">
-                <input name="mulai" className="table-search w-100 m-1" type="date" {...register("mulai", { required: true })} />
-                <input name="berakhir" className="table-search w-100 m-1" type="date" {...register("berakhir", { required: true })} />
+                <div className="w-100 m-1">
+                    <h6>Tanggal Diskon Dimulai</h6>
+                    <input name="mulai" className="table-search" type="date" {...register("mulai", { required: true })} />
+                </div>
+                <div className="w-100 m-1">
+                    <h6>Tanggal Diskon Berakhir</h6>
+                    <input name="berakhir" className="table-search" type="date" {...register("berakhir", { required: true })} />
+                </div>
             </div>
             <button type="submit" className="btn-kirim m-1">Edit Diskon</button>
         </form>

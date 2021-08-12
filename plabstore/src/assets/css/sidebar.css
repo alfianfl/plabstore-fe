@@ -3,6 +3,7 @@
   max-width: 250px;
   background-color: #e4e4e4;
   /* padding: 5%; */
+  position: -webkit-sticky;
   position: sticky;
   left: 0;
   top: 0;
@@ -28,8 +29,12 @@
 }
 
 #sidebar .toggle-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: 1.5rem;
 }
 

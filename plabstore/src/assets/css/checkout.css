@@ -14,13 +14,15 @@
 .checkout .button--anthe::before {
   content: "";
   background-color: #5624d0;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
   clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-  transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+  transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
   border-radius: 5px;
 }
 
 .checkout .button--anthe:hover::before {
   background-color: #5624d0;
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
 
@@ -28,7 +30,10 @@
   display: block;
   mix-blend-mode: hard-light;
   color: #fff;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
   transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+  transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1), -webkit-transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
 }
 
 .checkout .content__item {
@@ -37,10 +42,19 @@
   margin: 0;
   padding: 0;
   counter-increment: itemcounter;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   z-index: 1;
   pointer-events: none;
@@ -78,7 +92,8 @@
 }
 
 .checkout .button--anthe:hover span {
-  transform: translate3d(-10px, 0, 0);
+  -webkit-transform: translate3d(-10px, 0, 0);
+          transform: translate3d(-10px, 0, 0);
 }
 
 .checkout .button-beli button {
@@ -92,18 +107,22 @@
 .checkout .voucher-form {
   background-color: #fff;
   width: 100%;
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 20px;
   margin-left: 10px;
 }
 
 .checkout .checkout-form {
   width: 100%;
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-left: 10px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -111,6 +130,7 @@
 
 .checkout .checkout-form .ganti-alamat {
   color: #94d0cc;
+  -webkit-transition: hover 0.3s;
   transition: hover 0.3s;
 }
 
@@ -153,9 +173,11 @@
   position: relative;
   right: 10px;
   width: 100%;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .checkout .checkout-thumbnail .rounded-size {
@@ -163,15 +185,23 @@
   width: 35px;
   height: 35px;
   font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: black;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   border-radius: 50%;
 }
 
 .checkout .checkout-thumbnail .thumb-button-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -191,7 +221,8 @@
 
 .checkout .checkout-thumbnail .button-beli {
   border: 0.5px solid #000000;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .checkout .checkout-thumbnail .button-beli button:hover {
