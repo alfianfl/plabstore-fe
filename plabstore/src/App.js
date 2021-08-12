@@ -10,7 +10,7 @@ import "./assets/css/preloader.css";
 function App() {
   return (
     <div>
-      <div className="loader ">
+      <div className="loader " style={{ zIndex: "99999999" }}>
         <div id="preloader" />
       </div>
       <Provider store={store}>
