@@ -29,7 +29,10 @@ function CardProduct({ gender }) {
     <SwiperBasic>
       {cardLoad.map((product) => (
         <SwiperSlide key={product.id}>
+          <div className="mx-lg-0 mx-3 d-flex justify-content-center">
+
           <div class="card-skeleton"></div>
+          </div>
         </SwiperSlide>
       ))}
     </SwiperBasic>
@@ -44,7 +47,7 @@ function CardProduct({ gender }) {
               .filter((product) => product.category.jenis === gender)
               .map((product) => (
                 <SwiperSlide key={product.id}>
-                  <div className="mx-lg-0 mx-3">
+                  <div className="mx-lg-0 mx-3 d-flex justify-content-center">
                     <div
                       className="card-product mx-2 bg-light"
                       style={{

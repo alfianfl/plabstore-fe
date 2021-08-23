@@ -5,6 +5,8 @@ import "../../assets/css/checkout.css";
 import { TextField } from "../../components/form";
 import { Button } from "../../components/buttons";
 
+import { Link } from "react-router-dom";
+
 import { AddProduct, RemoveProduct } from "../../redux";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -159,7 +161,9 @@ function Checkout() {
           <div className="checkout-form mt-3 px-lg-4 px-2">
             <div className="d-flex justify-content-between">
               <h4>Alamat</h4>
-              <span className="ganti-alamat">Ganti Alamat</span>
+              <Link to="/editProfile" style={{textDecoration:'none'}}>
+                <span className="ganti-alamat">Ganti Alamat</span>
+              </Link>
             </div>
             <div>
               {" "}
@@ -174,7 +178,7 @@ function Checkout() {
             </div>
             <ReactMidtrans clienttKey={"your-key"} token={"payment-token"}>
               <div className="btn-bayar">
-                <Button size="medium" variant="contained" background="#94D0CC">
+                <Button size="medium" variant="contained" background="#f50057">
                   Bayar
                 </Button>
               </div>

@@ -1,4 +1,4 @@
-import { fade } from "@material-ui/core/styles";
+
 
 function UseStyles() {
   const styles = (theme) => ({
@@ -11,7 +11,7 @@ function UseStyles() {
     },
     grow: {
       flexGrow: 1,
-      backgroundColor: "#ffff",
+      backgroundColor: "black",
     },
 
     menuButton: {
@@ -38,9 +38,7 @@ function UseStyles() {
       position: "relative",
       borderRadius: theme.shape.borderRadius,
       backgroundColor: "white",
-      "&:hover": {
-        backgroundColor: fade(theme.palette.common.white, 0.25),
-      },
+
       border: "1px solid grey",
       marginRight: theme.spacing(2),
       marginLeft: 0,

@@ -17,6 +17,7 @@ function _BannerProduct() {
         style={{
           backgroundImage: `url(${banner})`,
           backgroundRepeat: "no-repeat",
+          backgroundSize:"cover"
         }}
       >
         <div className="container-fluid">

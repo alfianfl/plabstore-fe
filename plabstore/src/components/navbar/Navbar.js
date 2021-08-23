@@ -13,7 +13,6 @@ import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import UseDropdownMenu from "./DropdownNavbar";
 import Typography from "@material-ui/core/Typography";
-
 import { Link } from "react-router-dom";
 import { ModalLogin, ModalRegister } from "../modal";
 
@@ -28,6 +27,8 @@ export default function Navbar() {
     handleMobileMenuOpen,
     menuId,
     mobileMenuId,
+    handleClick,
+    renderHamburger
   } = UseDropdownMenu();
 
   const [isLogin] = React.useState(true);
@@ -42,12 +43,13 @@ export default function Navbar() {
             className={classes.menuButton}
             color="default"
             aria-label="open drawer"
+            onClick={handleClick}
+            style={{color:'white'}}
           >
             <MenuIcon />
           </IconButton>
-          {/* <Typography className={classes.title} variant="h6" nowWrap>
-            Plabstore
-          </Typography> */}
+          {renderHamburger}
+
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -73,7 +75,7 @@ export default function Navbar() {
                 >
                   <Link
                     to="/listProduk"
-                    style={{ textDecoration: "none", color: "black" }}
+                    style={{ textDecoration: "none", color: "white" }}
                   >
                     <IconButton color="inherit">
                       <Badge badgeContent={"new"} color="secondary">
@@ -89,7 +91,7 @@ export default function Navbar() {
                 >
                   <Link
                     to="/checkout"
-                    style={{ textDecoration: "none", color: "black" }}
+                    style={{ textDecoration: "none", color: "white" }}
                   >
                     <IconButton aria-label="show 4 new mails" color="inherit">
                       <Badge badgeContent={4} color="secondary">
@@ -104,7 +106,7 @@ export default function Navbar() {
                   aria-controls={menuId}
                   aria-haspopup="true"
                   onClick={handleProfileMenuOpen}
-                  color="default"
+                  style={{color:'white'}}
                 >
                   <AccountCircle />
                 </IconButton>{" "}
@@ -130,7 +132,7 @@ export default function Navbar() {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              color="default"
+              style={{color:'white'}}
             >
               <AccountCircle />
             </IconButton>

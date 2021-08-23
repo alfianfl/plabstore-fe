@@ -8,18 +8,40 @@ import { ModalLogin, ModalRegister } from "../modal";
 
 import { Link } from "react-router-dom";
 
+// Hamburger option menu
+const options = [
+  'Tamplikan Semua',
+  'Gamis',
+  'T-shirt',
+  'Kemeja',
+  'Baju tidur',
+  'Daster',
+  'Lain-Lain',
+];
+
+const ITEM_HEIGHT = 48;
+
 function DropdownNavbar() {
   const { styles } = UseStyles();
   const useStyles = makeStyles(styles);
   const classes = useStyles();
-
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
   const [isLogin] = React.useState(true);
-
-  const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const [anchorElH, setAnchorElH] = React.useState(null);
+  
+  const isMenuOpen = Boolean(anchorEl);
+  const open = Boolean(anchorElH);
+
+  const handleClick = (event) => {
+    setAnchorElH(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorElH(null);
+  };
+
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -99,6 +121,32 @@ function DropdownNavbar() {
     </Menu>
   );
 
+  // hamburger menu
+  const renderHamburger =  <Menu
+  id="long-menu"
+  anchorEl={anchorElH}
+  keepMounted
+  open={open}
+  onClose={handleClose}
+  PaperProps={{
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5,
+      width: '20ch',
+   
+    },
+  }}
+  style={{zIndex:'9999999999'}}
+>
+  {options.map((option) => (
+      <Link to={`/listProduk/${option}`} style={{textDecoration:'none', color:'grey'}}>
+    <MenuItem key={option} selected={option === 'Tampilkan Semua'} onClick={handleClose}>
+        {option}
+
+    </MenuItem>
+      </Link>
+  ))}
+</Menu>
+
   // mobile
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = isLogin ? (
@@ -110,6 +158,7 @@ function DropdownNavbar() {
       transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMobileMenuOpen}
       onClose={handleMenuClose}
+      style={{zIndex:'9999999999'}}
     >
       <Link style={{ textDecoration: "none", color: "black" }} to={"/profile"}>
         <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
@@ -169,6 +218,8 @@ function DropdownNavbar() {
     handleMobileMenuOpen,
     menuId,
     mobileMenuId,
+    handleClick,
+    renderHamburger
   };
 }
 

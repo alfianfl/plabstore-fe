@@ -10,7 +10,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { AddWishlist, fetchDetailProducts } from "../../redux";
 import { AddCartProduct } from "../../redux";
 
+
 import { Link, useParams } from "react-router-dom";
+import {CardProductSwiper} from "../../components/cards";
 function DetailProduct() {
   const [qty, setQty] = useState(1);
   const { id } = useParams();
@@ -284,6 +286,7 @@ function DetailProduct() {
                     </button>
                     <button
                       className="btn-wishlist mx-1 mb-3"
+                     
                       onClick={() =>
                         dispatch(
                           AddWishlist({
@@ -318,6 +321,8 @@ function DetailProduct() {
           </GridItem>
         </GridContainer>
       </section>
+      <h1 className="text-center mb-5">Rekomendasi</h1>
+    <CardProductSwiper gender="pria" />
     </div>
   );
 }
