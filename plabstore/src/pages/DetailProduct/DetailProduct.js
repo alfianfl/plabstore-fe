@@ -18,7 +18,7 @@ function DetailProduct() {
   const { id } = useParams();
   const productData = useSelector((state) => state.detailProduct);
   const dispatch = useDispatch();
-  const [sizeCart, setSizeCart] = useState("");
+  const [sizeCart, setSizeCart] = useState("S");
 
   const handleChangeSize = (e) => {
     const { value } = e.target;
@@ -286,7 +286,6 @@ function DetailProduct() {
                     </button>
                     <button
                       className="btn-wishlist mx-1 mb-3"
-                     
                       onClick={() =>
                         dispatch(
                           AddWishlist({

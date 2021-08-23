@@ -35,6 +35,7 @@ function CardProduct() {
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
+
   return productData.loading ? (
     <div className="row">
       {cardLoad.map((product) => (
