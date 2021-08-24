@@ -7,7 +7,7 @@ function Banner() {
       <section id="banner-home">
         <div className="banner py-5 my-5">
           <h1 className="title-banner">Let`s Buy Our Product</h1>
-          <p>Do you wanna se Other Product?</p>
+          <p>Do you wanna see Other Product?</p>
 
           <button className="btn btn-toko">
             {" "}

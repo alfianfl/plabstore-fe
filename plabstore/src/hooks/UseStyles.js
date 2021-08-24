@@ -25,13 +25,14 @@ function UseStyles() {
       [theme.breakpoints.up("sm")]: {
         display: "block",
       },
-      color: "black",
+      color: "#fff",
       fontSize: "16px",
       margin: "0px 20px 0px 20px",
       textAlign: "center",
       "&:hover": {
-        color: "#94D0CC",
+        color: "#fff",
         cursor: "pointer",
+        textDecoration:'underline'
       },
     },
     search: {

@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import { ModalLogin, ModalRegister } from "../modal";
 
 export default function Navbar() {
+  // useStyles di refactor jadi Hooks
   const { styles, ...props } = UseStyles();
   const useStyles = makeStyles(styles);
   const classes = useStyles();
@@ -31,6 +32,7 @@ export default function Navbar() {
     renderHamburger
   } = UseDropdownMenu();
 
+  // if login true
   const [isLogin] = React.useState(true);
 
   return (

@@ -17,6 +17,8 @@ import {
   EditDiskon,
 } from "../pages";
 
+// bisa pake lazy biar gabanyak import
+
 export const routes = [
   {
     name: "Home",
@@ -94,6 +96,14 @@ export const routes = [
     name: "DetailProduk",
     path: () => {
       return "/listProduk/detailProduk/:id";
+    },
+    exact: true,
+    component: DetailProduct,
+  },
+  {
+    name: "DetailProduk",
+    path: () => {
+      return "/listProduk/detailProduk/detailProduk:id";
     },
     exact: true,
     component: DetailProduct,

@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 
 // Hamburger option menu
 const options = [
-  'Tamplikan Semua',
   'Gamis',
   'T-shirt',
   'Kemeja',

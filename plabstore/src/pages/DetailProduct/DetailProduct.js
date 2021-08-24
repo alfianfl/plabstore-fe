@@ -12,7 +12,7 @@ import { AddCartProduct } from "../../redux";
 
 
 import { Link, useParams } from "react-router-dom";
-import {CardProductSwiper} from "../../components/cards";
+// import {CardProductSwiper} from "../../components/cards";
 function DetailProduct() {
   const [qty, setQty] = useState(1);
   const { id } = useParams();
@@ -320,8 +320,8 @@ function DetailProduct() {
           </GridItem>
         </GridContainer>
       </section>
-      <h1 className="text-center mb-5">Rekomendasi</h1>
-    <CardProductSwiper gender="pria" />
+      {/* <h1 className="text-center mb-5">Rekomendasi</h1>
+    <CardProductSwiper gender="pria" /> */}
     </div>
   );
 }
